@@ -27,6 +27,31 @@
 		<link rel="manifest" href="/site.webmanifest" />
 	</head>
 
+	<style>
+		.link-hover-transition {
+			position: relative;
+			display: inline-block;
+		}
+
+		.link-hover-transition::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: 0;
+			left: 0;
+			background-color: currentColor;
+			visibility: hidden;
+			transform: scaleX(0);
+			transition: all 0.3s ease-in-out;
+		}
+
+		.link-hover-transition:hover::after {
+			visibility: visible;
+			transform: scaleX(1);
+		}
+	</style>
+
 	<body
 		class="bg-gray-900 text-white flex items-center justify-center h-screen"
 	>
@@ -56,8 +81,15 @@
 					/>
 				</svg>
 			</div>
-			<a href="https://www.linkedin.com/in/morgphem2610/" target="_blank" class="mt-8 text-gray-400">
-				<span class="text-purple-500 font-semibold">Morgan Phemba</span>
+			<a
+				href="https://www.linkedin.com/in/morgphem2610/"
+				target="_blank"
+				class="mt-8 text-gray-400"
+			>
+				<span
+					class="text-purple-500 font-semibold link-hover-transition"
+					>Morgan Phemba</span
+				>
 			</a>
 		</div>
 	</body>
