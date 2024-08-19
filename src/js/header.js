@@ -13,3 +13,23 @@ document.getElementById("toggleButton").addEventListener("click", function () {
 		button.classList.remove("rotate-180");
 	}
 });
+
+const menuButton = document.querySelector(".mobile-menu-button");
+const mobileMenu = document.querySelector(".mobile-menu");
+const menuIcon = document.querySelector(".menu-icon");
+const xIcon = document.querySelector(".x-icon");
+
+menuButton.addEventListener("click", () => {
+	mobileMenu.classList.toggle("hidden");
+	menuIcon.classList.toggle("hidden");
+	xIcon.classList.toggle("hidden");
+});
+
+document.addEventListener("scroll", function () {
+	const element = document.querySelector(".fade-in-up");
+	const rect = element.getBoundingClientRect();
+
+	if (rect.top < window.innerHeight && rect.bottom > 0) {
+		element.classList.remove("opacity-0");
+	}
+});
