@@ -1,6 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-export const content = ["./src/**/*.{html,js}"];
-export const theme = {
-	extend: {},
+module.exports = {
+	content: {
+		relative: true,
+		transform: (content) => content.replace(/taos:/g, ""),
+		files: ["./src/**/*.{html,js}"],
+	},
+	theme: {
+		extend: {},
+	},
+	plugins: [require("taos/plugin")],
+	safelist: [
+		"!duration-[0ms]",
+		"!delay-[0ms]",
+		'html.js :where([class*="taos:"]:not(.taos-init))',
+	],
 };
-export const plugins = [];
