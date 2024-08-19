@@ -1,0 +1,9 @@
+.ionicon {
+   fill: #6b7280; /* Couleur par défaut */
+   transition: all 0.3s ease; /* Transition douce lors du survol */
+}
+
+.ionicon:hover {
+   fill: #8b5cf6; /* Couleur lors du survol */
+	transform: scale(1.2); /* Zoom lors du survol */
+}

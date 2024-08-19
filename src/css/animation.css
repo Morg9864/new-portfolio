@@ -1,0 +1,78 @@
+/* Border moving animation */
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.box-content {
+	position: relative;
+	z-index: 10;
+}
+
+.box::after,
+.box::before {
+	content: "";
+	position: absolute;
+	height: 107%;
+	width: 103%;
+	background-image: conic-gradient(
+		from var(--angle),
+		transparent 50%,
+		#8b5cf6
+	);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	border-radius: 10px;
+	animation: 3s spin linear infinite;
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+	.box::after,
+	.box::before {
+		height: 107%;
+		width: 102%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.box::after,
+	.box::before {
+		height: 107%;
+		width: 105%;
+	}
+}
+
+.box::before {
+	filter: blur(0.2rem);
+	opacity: 0.7;
+}
+
+@keyframes spin {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
+
+/* Fade in up animation */
+
+.fade-in-up {
+	animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
