@@ -25,7 +25,15 @@
 		<link rel="manifest" href="./site.webmanifest" />
 
 		<link rel="stylesheet" href="./css/output.css" />
+		<link rel="stylesheet" href="./src/css/svg.css" />
+		<link rel="stylesheet" href="./src/css/animation.css" />
+
+		<script src="./src/js/header.js" defer></script>
+		<script>
+			document.documentElement.classList.add("js");
+		</script>
 	</head>
+
 	<body class="bg-violet-50 text-gray-500 mx-auto w-4/5 h-screen">
 		<!--Responsive Navbar -->
 		<nav class="bg-white shadow-lg">
@@ -41,15 +49,15 @@
 							Morgan PHEMBA
 						</a>
 						<div
-							class="flex items center justify-between ml-10 space-x-16"
+							class="flex items center justify-between lg:ml-10 xl:ml-80 space-x-16 text-base md:text-base lg:text-xl"
 						>
 							<a
-								href="#"
+								href="#section-hero"
 								class="text-gray-800 hover:text-gray-500"
 								>Accueil</a
 							>
 							<a
-								href="#"
+								href="#section-about"
 								class="text-gray-800 hover:text-gray-500"
 								>A propos</a
 							>
@@ -65,10 +73,13 @@
 							>
 						</div>
 					</div>
-					<div class="md:hidden flex items-center">
+					<div
+						class="md:hidden flex items-center justify-between w-full"
+					>
+						<div class="flex-1"></div>
 						<button class="mobile-menu-button">
 							<svg
-								class="w-6 h-6"
+								class="w-6 h-6 text-violet-500 menu-icon"
 								stroke="currentColor"
 								fill="none"
 								stroke-width="2"
@@ -78,11 +89,22 @@
 							>
 								<path d="M4 6h16M4 12h16m-7 6h7"></path>
 							</svg>
+							<svg
+								class="w-6 h-6 text-violet-500 x-icon hidden"
+								stroke="currentColor"
+								fill="none"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
 						</button>
 					</div>
 				</div>
 			</div>
-			<div class="hidden mobile-menu">
+			<div class="hidden mobile-menu text-center">
 				<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>Accueil</a
 				>
@@ -97,46 +119,746 @@
 				>
 			</div>
 		</nav>
-		<!--Responsive Navbar -->
+		<!--FIN Responsive Navbar -->
 
-		<section id="section-hero" class="container mx-auto px-6 py-16">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-				<div>
-					<img
-						src="./src/img/mrg_400x400.png"
-						alt="Morgan PHEMBA"
-						class="w-full bg-white rounded-lg shadow-lg h-64 object-cover object-center"
-					/>
+		<main>
+			<!-- Hero Section -->
+			<section id="section-hero" class="container mx-auto px-6 py-16">
+				<div
+					class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+				>
+					<div>
+						<img
+							src="./src/img/mrg_400x400.png"
+							alt="Morgan PHEMBA"
+							class="w-full bg-white rounded-lg shadow-lg md:h-48 lg:h-64 object-cover object-center"
+						/>
+					</div>
+					<div
+						class="bg-white text-center p-4 lg:p-6 rounded-lg shadow-lg md:col-span-2 xl:col-span-3"
+					>
+						<div class="bg-violet-100 rounded-lg">
+							<h2 class="text-3xl font-bold text-gray-800 pt-2">
+								Morgan PHEMBA
+							</h2>
+							<p class="text-gray-500 text-lg mb-2">
+								Développeur Web
+							</p>
+						</div>
+
+						<div
+							class="flex justify-center items-center w-full md:mt-6 lg:mt-12"
+						>
+							<p
+								class="text-gray-700 text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed"
+							>
+								Étudiant en informatique à l'ULiège <br/ > et
+								développeur web freelance.
+							</p>
+						</div>
+
+						<!-- En tant que développeur web fullstack, crée des
+							solutions web complètes, en alliant rigueur
+							technique et créativité. Passionné par le partage
+							des connaissances, j'enseigne aussi la programmation
+							et je m'engage activement dans la communauté
+							technologique à travers diverses initiatives. -->
+					</div>
+
+					<!-- XL <  -->
+					<div class="hidden xl:block col-span-4">
+						<div class="grid grid-cols-12 gap-4">
+							<div
+								class="bg-white p-4 rounded-lg shadow-lg md:row-span-2 col-span-4"
+							>
+								<div class="hidden md:block">
+									<h2
+										class="text-center text-xl lg:text-3xl font-bold text-violet-800 m-2"
+									>
+										Mes réseaux
+									</h2>
+								</div>
+								<div class="grid grid-cols-5">
+									<div
+										class="flex justify-center items-center lg:h-16 xl:h-20"
+									>
+										<a
+											href="https://www.linkedin.com/in/morgphem2610/"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												class="w-6 lg:w-8 xl:w-10 ionicon"
+												viewBox="0 0 512 512"
+											>
+												<path
+													d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"
+												/>
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex justify-center items-center lg:h-16 xl:h-20"
+									>
+										<a
+											href="https://github.com/Morg9864"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												class="w-6 lg:w-8 xl:w-10 ionicon"
+												viewBox="0 0 512 512"
+											>
+												<path
+													d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"
+												/>
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex justify-center items-center lg:h-16 xl:h-20"
+									>
+										<a
+											href="https://x.com/morgsdev"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												class="w-6 lg:w-8 xl:w-10 ionicon"
+												viewBox="0 0 512 512"
+											>
+												<path
+													d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+												/>
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex justify-center items-center lg:h-16 xl:h-20"
+									>
+										<a
+											href="https://discordapp.com/users/283000589485342729"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												class="w-6 lg:w-8 xl:w-10 ionicon"
+												viewBox="0 0 512 512"
+											>
+												<path
+													d="M464 66.52A50 50 0 00414.12 17L97.64 16A49.65 49.65 0 0048 65.52V392c0 27.3 22.28 48 49.64 48H368l-13-44 109 100zM324.65 329.81s-8.72-10.39-16-19.32C340.39 301.55 352.5 282 352.5 282a139 139 0 01-27.85 14.25 173.31 173.31 0 01-35.11 10.39 170.05 170.05 0 01-62.72-.24 184.45 184.45 0 01-35.59-10.4 141.46 141.46 0 01-17.68-8.21c-.73-.48-1.45-.72-2.18-1.21-.49-.24-.73-.48-1-.48-4.36-2.42-6.78-4.11-6.78-4.11s11.62 19.09 42.38 28.26c-7.27 9.18-16.23 19.81-16.23 19.81-53.51-1.69-73.85-36.47-73.85-36.47 0-77.06 34.87-139.62 34.87-139.62 34.87-25.85 67.8-25.12 67.8-25.12l2.42 2.9c-43.59 12.32-63.44 31.4-63.44 31.4s5.32-2.9 14.28-6.77c25.91-11.35 46.5-14.25 55-15.21a24 24 0 014.12-.49 205.62 205.62 0 0148.91-.48 201.62 201.62 0 0172.89 22.95s-19.13-18.15-60.3-30.45l3.39-3.86s33.17-.73 67.81 25.16c0 0 34.87 62.56 34.87 139.62 0-.28-20.35 34.5-73.86 36.19z"
+												/>
+												<path
+													d="M212.05 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.8 0 24.7-11.83 24.7-26.57.25-14.76-10.9-26.57-24.7-26.57zM300.43 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.81 0 24.7-11.83 24.7-26.57S314 218 300.43 218z"
+												/>
+											</svg>
+										</a>
+									</div>
+									<div
+										class="flex justify-center items-center lg:h-16 xl:h-20"
+									>
+										<a
+											href="https://www.instagram.com/morg__2610/"
+											target="_blank"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												class="w-6 lg:w-8 xl:w-10 ionicon"
+												viewBox="0 0 512 512"
+											>
+												<path
+													d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
+												/>
+												<path
+													d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"
+												/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="bg-white box relative p-4 rounded-lg shadow-lg md:row-span-2 col-span-4 flex flex-col justify-center items-center gap-5"
+							>
+								<div
+									class="hidden md:block text-center text-xl font-bold text-violet-900 m-2"
+								>
+									<h2>N'hésitez pas à</h2>
+								</div>
+								<button
+									type="button"
+									class="text-white bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-violet-300 shadow-lg shadow-violet-500/50 font-medium rounded-lg text-sm px-8 py-4 text-center me-2 mb-2"
+								>
+									Me contacter
+								</button>
+							</div>
+
+							<div
+								class="bg-white p-4 rounded-lg shadow-lg md:row-span-2 col-span-4 flex flex-col justify-center items-center gap-5"
+							>
+								<div
+									class="hidden md:block text-center text-lg font-bold text-violet-700 m-2"
+								>
+									<h2>Appuyez ici pour</h2>
+								</div>
+								<button
+									class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-violet-300 to-violet-300 group-hover:from-violet-300 group-hover:to-violet-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200"
+								>
+									<span
+										class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0"
+									>
+										Me connaitre
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- XL >  -->
+					<!-- RÉSEAUX -->
+					<div
+						class="xl:hidden bg-white p-4 rounded-lg shadow-lg md:row-span-2"
+					>
+						<div class="hidden md:block">
+							<h2
+								class="text-center text-xl lg:text-2xl font-bold text-violet-700 m-6 lg:m-2"
+							>
+								Mes réseaux
+							</h2>
+						</div>
+						<div class="grid grid-cols-5">
+							<div
+								class="flex justify-center items-center lg:h-16 xl:h-20"
+							>
+								<a
+									href="https://www.linkedin.com/in/morgphem2610/"
+									target="_blank"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-6 lg:w-8 xl:w-10 ionicon"
+										viewBox="0 0 512 512"
+									>
+										<path
+											d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div
+								class="flex justify-center items-center lg:h-16 xl:h-20"
+							>
+								<a
+									href="https://github.com/Morg9864"
+									target="_blank"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-6 lg:w-8 xl:w-10 ionicon"
+										viewBox="0 0 512 512"
+									>
+										<path
+											d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div
+								class="flex justify-center items-center lg:h-16 xl:h-20"
+							>
+								<a
+									href="https://x.com/morgsdev"
+									target="_blank"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-6 lg:w-8 xl:w-10 ionicon"
+										viewBox="0 0 512 512"
+									>
+										<path
+											d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div
+								class="flex justify-center items-center lg:h-16 xl:h-20"
+							>
+								<a
+									href="https://discordapp.com/users/283000589485342729"
+									target="_blank"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-6 lg:w-8 xl:w-10 ionicon"
+										viewBox="0 0 512 512"
+									>
+										<path
+											d="M464 66.52A50 50 0 00414.12 17L97.64 16A49.65 49.65 0 0048 65.52V392c0 27.3 22.28 48 49.64 48H368l-13-44 109 100zM324.65 329.81s-8.72-10.39-16-19.32C340.39 301.55 352.5 282 352.5 282a139 139 0 01-27.85 14.25 173.31 173.31 0 01-35.11 10.39 170.05 170.05 0 01-62.72-.24 184.45 184.45 0 01-35.59-10.4 141.46 141.46 0 01-17.68-8.21c-.73-.48-1.45-.72-2.18-1.21-.49-.24-.73-.48-1-.48-4.36-2.42-6.78-4.11-6.78-4.11s11.62 19.09 42.38 28.26c-7.27 9.18-16.23 19.81-16.23 19.81-53.51-1.69-73.85-36.47-73.85-36.47 0-77.06 34.87-139.62 34.87-139.62 34.87-25.85 67.8-25.12 67.8-25.12l2.42 2.9c-43.59 12.32-63.44 31.4-63.44 31.4s5.32-2.9 14.28-6.77c25.91-11.35 46.5-14.25 55-15.21a24 24 0 014.12-.49 205.62 205.62 0 0148.91-.48 201.62 201.62 0 0172.89 22.95s-19.13-18.15-60.3-30.45l3.39-3.86s33.17-.73 67.81 25.16c0 0 34.87 62.56 34.87 139.62 0-.28-20.35 34.5-73.86 36.19z"
+										/>
+										<path
+											d="M212.05 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.8 0 24.7-11.83 24.7-26.57.25-14.76-10.9-26.57-24.7-26.57zM300.43 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.81 0 24.7-11.83 24.7-26.57S314 218 300.43 218z"
+										/>
+									</svg>
+								</a>
+							</div>
+							<div
+								class="flex justify-center items-center lg:h-16 xl:h-20"
+							>
+								<a
+									href="https://www.instagram.com/morg__2610/"
+									target="_blank"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-6 lg:w-8 xl:w-10 ionicon"
+										viewBox="0 0 512 512"
+									>
+										<path
+											d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
+										/>
+										<path
+											d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- CONTACT -->
+					<div
+						class="xl:hidden box relative bg-white p-4 rounded-lg shadow-lg md:row-span-2 flex flex-col justify-center items-center gap-5"
+					>
+						<div class="box-content">
+							<div
+								class="hidden md:block text-center text-xl font-bold text-violet-900 m-2"
+							>
+								<h2>N'hésitez pas à</h2>
+							</div>
+							<button
+								type="button"
+								class="text-white bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-violet-300 shadow-lg shadow-violet-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+							>
+								Me contacter
+							</button>
+						</div>
+					</div>
+
+					<!-- ME CONNAITRE -->
+					<div
+						class="xl:hidden bg-white p-4 rounded-lg shadow-lg md:row-span-2 flex flex-col justify-center items-center gap-5"
+					>
+						<div
+							class="hidden md:block text-center text-lg font-bold text-violet-700 m-2"
+						>
+							<h2>Appuyez ici pour</h2>
+						</div>
+						<button
+							class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-violet-300 to-violet-300 group-hover:from-violet-300 group-hover:to-violet-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200"
+						>
+							<span
+								class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0"
+							>
+								Me connaitre
+							</span>
+						</button>
+					</div>
+
+					<div
+						class="bg-white p-4 rounded-lg shadow-lg md:col-span-3 xl:col-span-4 flex justify-center items-center"
+					>
+						<h2
+							class="text-center text-lg lg:text-2xl font-bold text-gray-700 m-2"
+						>
+							Transformer vos idées en expériences web
+							captivantes,
+							<br />
+							alliant design intuitif et performances optimisées.
+						</h2>
+					</div>
 				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
+				<!-- Fin de la grille -->
+			</section>
+
+			<!-- About Section -->
+			<section id="section-about" class="container mx-auto p-6">
+				<h2
+					class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-800 text-center mb-8"
+				>
+					À propos
+				</h2>
+
+				<!-- MD <  -->
+				<div class="hidden md:grid grid-cols-2 gap-10">
+					<!-- IMG -->
+					<div class="hidden lg:block col-span-1">
+						<img
+							src="./src/img/programming.jpg"
+							alt="Laptop on a desk displaying code in a text editor with a pen holder beside it"
+							class="w-full h-96 object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+
+					<!-- À propos de moi -->
+					<div class="flex flex-col col-span-2 lg:col-span-1">
+						<div class="flex justify-center">
+							<h2
+								class="text-2xl lg:text-3xl font-bold text-violet-800 mb-8"
+							>
+								Qui est Morgan ?
+							</h2>
+						</div>
+						<p class="md:block mb-3">
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Quaerat sit recusandae veniam cumque atque
+							perspiciatis voluptate cum! Porro, cum in. Id
+							aperiam necessitatibus aut modi.
+						</p>
+						<p class="md:block mb-3">
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Quaerat sit recusandae veniam cumque atque
+							perspiciatis voluptate cum! Porro, cum in. Id
+							aperiam necessitatibus aut modi.
+						</p>
+						<p class="md:block mb-3">
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Quaerat sit recusandae veniam cumque atque
+							perspiciatis voluptate cum! Porro, cum in. Id
+							aperiam necessitatibus aut modi.
+						</p>
+						<p class="md:block mb-3">
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Quaerat sit recusandae veniam cumque atque
+							perspiciatis voluptate cum! Porro, cum in. Id
+							aperiam necessitatibus aut modi.
+						</p>
+					</div>
+
+					<!-- Compétences -->
+					<div class="col-span-1">
+						<div class="flex justify-center">
+							<h2
+								class="text-2xl lg:text-3xl font-bold text-violet-800 mb-8"
+							>
+								Mes compétences
+							</h2>
+						</div>
+						<div class="grid grid-row-4 gap-6">
+							<div
+								class="flex justify-end bg-white p-4 rounded-lg shadow-lg"
+							>
+								<div class="flex flex-col items-end">
+									<h3 class="text-violet-500">Développement Web</h3>
+									<hr class="my-1 text-black">
+									<p>
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing.
+									</p>
+								</div>
+							</div>
+							<div
+								class="flex justify-end bg-white p-4 rounded-lg shadow-lg"
+							>
+								<div class="flex flex-col items-end">
+									<h3 class="text-violet-500">Conception Web</h3>
+									<hr class="my-1 text-black">
+									<p>
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing.
+									</p>
+								</div>
+							</div>
+							<div
+								class="flex justify-end bg-white p-4 rounded-lg shadow-lg"
+							>
+								<div class="flex flex-col items-end">
+									<h3 class="text-violet-500">Maintenance</h3>
+									<hr class="my-1 text-black">
+									<p>
+										Lorem ipsum, dolor sit amet consectetur
+										adipisicing.
+									</p>
+								</div>
+							</div>
+							<div
+								class="flex justify-between bg-white p-4 rounded-lg shadow-lg"
+							>
+								<img
+									src="https://via.placeholder.com/50"
+									alt="Compétences : "
+								/>
+								<img
+									src="https://via.placeholder.com/50"
+									alt="Compétences : "
+								/>
+								<img
+									src="https://via.placeholder.com/50"
+									alt="Compétences : "
+								/>
+								<img
+									src="https://via.placeholder.com/50"
+									alt="Compétences : "
+								/>
+								<img
+									src="https://via.placeholder.com/50"
+									alt="Compétences : "
+								/>
+								<img
+									src="https://via.placeholder.com/50"
+									alt="Compétences : "
+								/>
+							</div>
+						</div>
+					</div>
+
+					<!-- Expériences -->
+					<div class="col-span-1">
+						<div class="flex justify-center">
+							<h2
+								class="text-2xl lg:text-3xl font-bold text-violet-800 mb-8"
+							>
+								Expérience
+							</h2>
+						</div>
+						<div class="grid grid-cols-5 gap-5">
+							<div
+								class="bg-white p-4 rounded-lg shadow-lg col-span-4"
+							></div>
+							<div class="grid grid-rows-3 gap-10">
+								<div class="bg-white shadow-lg rounded-lg">
+									<button class="h-full">
+										<img
+											src="https://via.placeholder.com/100"
+											alt=""
+											class="rounded-lg h-full"
+										/>
+									</button>
+								</div>
+								<div class="bg-white shadow-lg rounded-lg">
+									<button class="h-full">
+										<img
+											src="https://via.placeholder.com/100"
+											alt=""
+											class="rounded-lg h-full"
+										/>
+									</button>
+								</div>
+								<div class="bg-white shadow-lg rounded-lg">
+									<button class="h-full">
+										<img
+											src="https://via.placeholder.com/100"
+											alt=""
+											class="rounded-lg h-full"
+										/>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
+
+				<!-- MD >  -->
+				<div class="md:hidden">
+					<div class="grid grid-cols-1 gap-10">
+						<!-- À propos de moi -->
+						<div class="flex flex-col">
+							<div class="flex justify-center">
+								<h2
+									class="text-2xl lg:text-3xl font-bold text-violet-800 mb-8"
+								>
+									Qui est Morgan ?
+								</h2>
+							</div>
+							<p class="md:hidden mb-3">
+								<span class="text-violet-500">TLDR :</span>
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Quaerat sit recusandae veniam
+								cumque atque perspiciatis voluptate cum! Porro,
+								cum in. Id aperiam necessitatibus aut modi.
+								<span class="text-violet-500">END TLDR</span>
+							</p>
+
+							<p class="hidden md:block mb-3 moreText">
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Quaerat sit recusandae veniam
+								cumque atque perspiciatis voluptate cum! Porro,
+								cum in. Id aperiam necessitatibus aut modi.
+							</p>
+							<p class="hidden md:block mb-3 moreText">
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Quaerat sit recusandae veniam
+								cumque atque perspiciatis voluptate cum! Porro,
+								cum in. Id aperiam necessitatibus aut modi.
+							</p>
+							<p class="hidden md:block mb-3 moreText">
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Quaerat sit recusandae veniam
+								cumque atque perspiciatis voluptate cum! Porro,
+								cum in. Id aperiam necessitatibus aut modi.
+							</p>
+							<p class="hidden md:block mb-3 moreText">
+								Lorem ipsum dolor, sit amet consectetur
+								adipisicing elit. Quaerat sit recusandae veniam
+								cumque atque perspiciatis voluptate cum! Porro,
+								cum in. Id aperiam necessitatibus aut modi.
+							</p>
+
+							<!-- Bouton pour afficher/masquer le texte supplémentaire -->
+							<button
+								id="toggleButton"
+								class="md:hidden mt-4 text-violet-500 hover:text-violet-700"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-6 w-6 mx-auto transform transition-transform duration-300"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										id="toggleIcon"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</button>
+						</div>
+
+						<!-- Compétences -->
+						<div class="flex flex-col gap-5">
+							<div class="flex justify-center">
+								<h2
+									class="text-2xl lg:text-3xl font-bold text-violet-800 mb-4"
+								>
+									Mes compétences
+								</h2>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow-lg">
+								<div class="flex flex-col justify-between">
+									<div
+										class="flex flex-col justify-center items-end"
+									>
+										<h3 class="text-violet-500">Développement Web</h3>
+									</div>
+									<hr class="my-1" />
+									<div>
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Quo, quasi.
+									</div>
+								</div>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow-lg">
+								<div class="flex flex-col justify-between">
+									<div
+										class="flex flex-col justify-center items-end"
+									>
+										<h3 class="text-violet-500">Conception Web</h3>
+									</div>
+									<hr class="my-1" />
+									<div>
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Quo, quasi.
+									</div>
+								</div>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow-lg">
+								<div class="flex flex-col justify-between">
+									<div
+										class="flex flex-col justify-center items-end"
+									>
+										<h3 class="text-violet-500">Maintenance</h3>
+									</div>
+									<hr class="my-1" />
+									<div>
+										Lorem ipsum dolor sit amet consectetur
+										adipisicing elit. Quo, quasi.
+									</div>
+								</div>
+							</div>
+							<div
+								class="bg-white p-4 pl-6bhs rounded-lg shadow-lg"
+							>
+								<div class="flex items-center justify-between">
+									<div class="grid grid-cols-3 gap-5">
+										<img
+											src="https://via.placeholder.com/50"
+											alt="Compétences : "
+										/>
+										<img
+											src="https://via.placeholder.com/50"
+											alt="Compétences : "
+										/>
+										<img
+											src="https://via.placeholder.com/50"
+											alt="Compétences : "
+										/>
+										<img
+											src="https://via.placeholder.com/50"
+											alt="Compétences : "
+										/>
+										<img
+											src="https://via.placeholder.com/50"
+											alt="Compétences : "
+										/>
+										<img
+											src="https://via.placeholder.com/50"
+											alt="Compétences : "
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Expériences -->
+						<div class="flex flex-col gap-5">
+							<div class="flex justify-center">
+								<h2
+									class="text-2xl lg:text-3xl font-bold text-violet-800 mb-4"
+								>
+									Expérience
+								</h2>
+							</div>
+							<div class="grid grid-cols-3 gap-5">
+								<div class="bg-white rounded-lg shadow-lg">
+									<button class="h-full">
+										<img
+											src="https://via.placeholder.com/100"
+											alt=""
+											class="rounded-lg h-full"
+										/>
+									</button>
+								</div>
+								<div class="bg-white rounded-lg shadow-lg">
+									<button class="h-full">
+										<img
+											src="https://via.placeholder.com/100"
+											alt=""
+											class="rounded-lg h-full"
+										/>
+									</button>
+								</div>
+								<div class="bg-white rounded-lg shadow-lg">
+									<button class="h-full">
+										<img
+											src="https://via.placeholder.com/100"
+											alt=""
+											class="rounded-lg h-full"
+										/>
+									</button>
+								</div>
+							</div>
+							<div
+								class="bg-white p-4 rounded-lg shadow-lg"
+							></div>
+						</div>
+					</div>
 				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
-				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
-				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
-				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
-				</div>
-				<div class="bg-white p-4 rounded-lg shadow-lg">
-					<h2 class="text-2xl font-bold">Morgan PHEMBA</h2>
-					<p class="text-gray-400">Développeur Web</p>
-				</div>
-			</div>
-		</section>
+			</section>
+		</main>
+		<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 	</body>
 </html>
