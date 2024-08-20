@@ -29,6 +29,7 @@
 		<link rel="stylesheet" href="./src/css/animation.css" />
 
 		<script src="./src/js/header.js" defer></script>
+		<script src="./src/js/about.js" defer></script>
 		<script>
 			document.documentElement.classList.add("js");
 		</script>
@@ -36,7 +37,7 @@
 
 	<body class="bg-violet-50 text-gray-500 mx-auto w-4/5 h-screen">
 		<!--Responsive Navbar -->
-		<nav class="bg-white shadow-lg">
+		<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
 			<div class="container mx-auto px-6 py-3">
 				<div class="flex items center justify-between">
 					<div
@@ -62,9 +63,9 @@
 								>A propos</a
 							>
 							<a
-								href="#"
+								href="#section-projects"
 								class="text-gray-800 hover:text-gray-500"
-								>Services</a
+								>Projets</a
 							>
 							<a
 								href="#"
@@ -105,14 +106,18 @@
 				</div>
 			</div>
 			<div class="hidden mobile-menu text-center">
-				<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200"
+				<a
+					href="#section-hero"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>Accueil</a
 				>
-				<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200"
+				<a
+					href="#section-about"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>A propos</a
 				>
-				<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200"
-					>Services</a
+				<a href="#section-projects" class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Projets</a
 				>
 				<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>Contact</a
@@ -123,7 +128,10 @@
 
 		<main>
 			<!-- Hero Section -->
-			<section id="section-hero" class="container mx-auto px-6 py-16">
+			<section
+				id="section-hero"
+				class="container mx-auto px-6 py-16 pt-32"
+			>
 				<div
 					class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4"
 				>
@@ -156,13 +164,6 @@
 								développeur web freelance.
 							</p>
 						</div>
-
-						<!-- En tant que développeur web fullstack, crée des
-							solutions web complètes, en alliant rigueur
-							technique et créativité. Passionné par le partage
-							des connaissances, j'enseigne aussi la programmation
-							et je m'engage activement dans la communauté
-							technologique à travers diverses initiatives. -->
 					</div>
 
 					<!-- XL <  -->
@@ -483,7 +484,7 @@
 			</section>
 
 			<!-- About Section -->
-			<section id="section-about" class="container mx-auto p-6">
+			<section id="section-about" class="container mx-auto p-10">
 				<h2
 					class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-800 text-center mb-8"
 				>
@@ -511,28 +512,45 @@
 							</h2>
 						</div>
 						<p class="md:block mb-3">
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Quaerat sit recusandae veniam cumque atque
-							perspiciatis voluptate cum! Porro, cum in. Id
-							aperiam necessitatibus aut modi.
+							Étudiant en Sciences Informatiques à la
+							<a
+								class="font-medium text-violet-600 underline hover:no-underline"
+								href="https://www.fsa.uliege.be/cms/c_3112656/fr/fsa"
+								>FACSA, Uliège</a
+							>, je me passionne pour le développement logiciel,
+							dans lequel je me spécialise à l'université.
 						</p>
 						<p class="md:block mb-3">
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Quaerat sit recusandae veniam cumque atque
-							perspiciatis voluptate cum! Porro, cum in. Id
-							aperiam necessitatibus aut modi.
+							Parallèlement à mes études, je me suis formé en
+							autodidacte au développement web et j'ai commencé à
+							travailler en tant que développeur web fullstack en
+							freelance.
 						</p>
 						<p class="md:block mb-3">
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Quaerat sit recusandae veniam cumque atque
-							perspiciatis voluptate cum! Porro, cum in. Id
-							aperiam necessitatibus aut modi.
+							Au sein de l'université, j'ai également eu
+							l'opportunité de rejoindre la Junior Entreprise
+							<a
+								class="font-medium text-violet-600 underline hover:no-underline"
+								href="https://nhitec.com/"
+								>N-HiTec</a
+							>, dont je suis actuellement administrateur chargé
+							des relations publiques et des événements.
 						</p>
 						<p class="md:block mb-3">
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Quaerat sit recusandae veniam cumque atque
-							perspiciatis voluptate cum! Porro, cum in. Id
-							aperiam necessitatibus aut modi.
+							En complément de mes activités universitaires et de
+							freelance, j'interviens en tant que formateur en
+							programmation pour
+							<a
+								class="font-medium text-violet-600 underline hover:no-underline"
+								href="https://www.ilplatform.be/"
+								>IL Platform</a
+							>. Par ailleurs, j'exerce également en tant que
+							consultant IT pour
+							<a
+								class="font-medium text-violet-600 underline hover:no-underline"
+								href="https://beego.be/fr/accueil/"
+								>Beego</a
+							>.
 						</p>
 					</div>
 
@@ -550,11 +568,18 @@
 								class="flex justify-end bg-white p-4 rounded-lg shadow-lg"
 							>
 								<div class="flex flex-col items-end">
-									<h3 class="text-violet-500">Développement Web</h3>
-									<hr class="my-1 text-black">
+									<h3 class="text-violet-500">
+										Développement Web
+									</h3>
+									<hr
+										class="my-1 border-t border-gray-200 w-full"
+									/>
 									<p>
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing.
+										Création et déploiement de sites web
+										dynamiques, incluant le développement
+										front-end et back-end, avec un focus sur
+										la performance, la sécurité et
+										l'expérience utilisateur.
 									</p>
 								</div>
 							</div>
@@ -562,11 +587,17 @@
 								class="flex justify-end bg-white p-4 rounded-lg shadow-lg"
 							>
 								<div class="flex flex-col items-end">
-									<h3 class="text-violet-500">Conception Web</h3>
-									<hr class="my-1 text-black">
+									<h3 class="text-violet-500">
+										Conception Web
+									</h3>
+									<hr
+										class="my-1 border-t border-gray-200 w-full"
+									/>
 									<p>
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing.
+										Élaboration de designs web intuitifs et
+										esthétiques, en mettant l'accent sur
+										l'ergonomie, la navigation fluide, et la
+										compatibilité multi-plateforme.
 									</p>
 								</div>
 							</div>
@@ -575,10 +606,16 @@
 							>
 								<div class="flex flex-col items-end">
 									<h3 class="text-violet-500">Maintenance</h3>
-									<hr class="my-1 text-black">
+									<hr
+										class="my-1 border-t border-gray-200 w-full"
+									/>
 									<p>
-										Lorem ipsum, dolor sit amet consectetur
-										adipisicing.
+										Gestion continue et amélioration des
+										sites web existants, incluant la
+										correction de bugs, les mises à jour de
+										sécurité, et l'optimisation des
+										performances pour garantir une opération
+										sans interruption.
 									</p>
 								</div>
 							</div>
@@ -588,32 +625,32 @@
 								<img
 									src="./src/logo/mongodb.png"
 									alt="Compétences : MongoDB"
-									class="w-12"
+									class="md:w-8 lg:w-12"
 								/>
 								<img
 									src="./src/logo/express.png"
 									alt="Compétences : Express"
-									class="w-12"
+									class="md:w-8 lg:w-12"
 								/>
 								<img
 									src="./src/logo/react.png"
 									alt="Compétences : React"
-									class="w-12"
+									class="md:w-8 lg:w-12"
 								/>
 								<img
 									src="./src/logo/nodejs.png"
 									alt="Compétences : Node.js"
-									class="w-12"
+									class="md:w-8 lg:w-12"
 								/>
 								<img
 									src="./src/logo/tailwindcss.png"
 									alt="Compétences : Tailwind CSS"
-									class="w-12"
+									class="md:w-8 lg:w-12"
 								/>
 								<img
 									src="./src/logo/figma.png"
 									alt="Compétences : Figma"
-									class="w-12"
+									class="md:w-8 lg:w-12"
 								/>
 							</div>
 						</div>
@@ -629,33 +666,303 @@
 							</h2>
 						</div>
 						<div class="grid grid-cols-5 gap-5">
-							<div
-								class="bg-white p-4 rounded-lg shadow-lg col-span-4"
-							></div>
+							<div class="container col-span-4" id="exp">
+								<div id="exp-none">&nbsp;</div>
+								<div
+									class="hidden bg-white p-4 rounded-lg shadow-lg"
+									id="exp-freelance"
+								>
+									<h2
+										class="text-center text-xl lg:text-3xl font-bold text-violet-800 m-2"
+									>
+										Freelance
+									</h2>
+									<div class="hidden lg:block">
+										<div class="text-sm mb-2">
+											En 2022, j'ai décidé de me lancer en
+											freelance, conscient que
+											l'université, bien qu'essentielle,
+											ne me fournirait peut-être pas
+											toutes les expériences pratiques
+											nécessaires pour me démarquer sur le
+											marché du travail. Animé par cette
+											volonté de prendre en main mon
+											avenir professionnel, j'ai entrepris
+											de me former en autodidacte,
+											explorant les différents aspects du
+											développement web fullstack. Cette
+											période d'apprentissage intensif m'a
+											permis de consolider mes compétences
+											et de commencer à offrir mes
+											services en tant que développeur
+											web.
+										</div>
+										<div class="text-sm mb-2">
+											Mes premiers clients ont été
+											principalement des membres de ma
+											famille, ainsi que des amis et leurs
+											proches. Ces premiers projets m'ont
+											offert une occasion précieuse de
+											mettre en pratique mes compétences
+											dans des contextes réels tout en
+											bâtissant ma confiance en tant que
+											professionnel. Chacune de ces
+											collaborations m'a aidé à affiner
+											mes compétences techniques et à
+											développer une approche plus
+											personnalisée et efficace dans la
+											gestion de projets.
+										</div>
+										<div class="text-sm">
+											En 2024, fort de cette expérience
+											initiale, j'ai ressenti le besoin de
+											me renouveler, d'élargir mes
+											horizons et de viser une clientèle
+											plus diverse et exigeante. Pour ce
+											faire, je me suis replongé dans
+											l'apprentissage, approfondissant mes
+											connaissances et techniques afin
+											d'offrir des services encore plus
+											complets et adaptés aux besoins d'un
+											marché en constante évolution. Mon
+											objectif est désormais de
+											transformer cette passion et cette
+											expertise en une activité freelance
+											capable de répondre aux attentes de
+											clients plus variés et ambitieux.
+										</div>
+									</div>
+									<div class="lg:hidden">
+										<div class="text-xs mb-1">
+											En 2022, j'ai pris l'initiative de
+											me lancer en freelance pour acquérir
+											des expériences pratiques que
+											l'université ne pouvait m'offrir, me
+											formant en autodidacte au
+											développement web fullstack.
+										</div>
+										<div class="text-xs mb-1">
+											Mes premiers clients, principalement
+											issus de mon cercle familial et
+											amical, m'ont permis de consolider
+											mes compétences et de gagner en
+											confiance.
+										</div>
+										<div class="text-xs mb-1">
+											En 2024, fort de cette expérience,
+											j'ai choisi de me perfectionner
+											davantage pour élargir ma clientèle
+											et offrir des services plus
+											complets, avec l'ambition de
+											transformer cette passion en une
+											activité freelance solide et
+											diversifiée.
+										</div>
+									</div>
+								</div>
+								<div
+									class="hidden bg-white p-4 rounded-lg shadow-lg"
+									id="exp-beego"
+								>
+									<h2
+										class="text-center text-xl lg:text-3xl font-bold text-violet-800 m-2"
+									>
+										Beego
+									</h2>
+									<div class="hidden lg:block">
+										<div class="text-sm mb-2">
+											En tant que consultant IT chez Beego
+											depuis octobre 2023, j'ai eu
+											l'opportunité d'acquérir une
+											expérience précieuse dans le domaine
+											du support technique et de
+											l'assistance informatique. Mon rôle
+											principal consiste à offrir des
+											solutions de diagnostic et de
+											dépannage pour une variété de
+											problèmes matériels et logiciels.
+											J'accompagne les clients tout au
+											long du processus, depuis
+											l'identification des
+											dysfonctionnements jusqu'à la mise
+											en place de solutions efficaces.
+										</div>
+										<div class="text-sm mb-2">
+											Mon expertise ne se limite pas
+											seulement aux aspects techniques ;
+											j'assure également un rôle de
+											conseiller, en aidant les
+											utilisateurs à optimiser
+											l'utilisation de leurs applications
+											et logiciels. Cette approche
+											personnalisée vise à garantir que
+											chaque client puisse exploiter
+											pleinement ses outils informatiques,
+											améliorant ainsi sa productivité et
+											son efficacité.
+										</div>
+										<div class="text-sm">
+											Cette expérience chez Beego m'a
+											permis de renforcer mes compétences
+											en résolution de problèmes, en
+											communication avec les clients, et
+											en adaptation aux divers défis
+											techniques rencontrés. Elle complète
+											parfaitement mon parcours en
+											développement logiciel et web, en
+											m'offrant une perspective plus large
+											sur les besoins et attentes des
+											utilisateurs finaux dans le domaine
+											IT.
+										</div>
+									</div>
+									<div class="lg:hidden">
+										<div class="text-xs mb-1">
+											Depuis octobre 2023, je suis
+											consultant IT chez Beego, où j'offre
+											un support technique et une
+											assistance informatique à une
+											clientèle variée, allant du
+											diagnostic de pannes à
+											l'optimisation des outils
+											informatiques.
+										</div>
+										<div class="text-xs mb-1">
+											Au-delà des aspects techniques,
+											j'assure un rôle de conseiller pour
+											aider les clients à exploiter
+											pleinement leurs outils, améliorant
+											ainsi leur productivité et leur
+											efficacité.
+										</div>
+										<div class="text-xs">
+											Cette expérience m'a permis de
+											renforcer ma capacité à résoudre des
+											problèmes, à communiquer avec les
+											clients, et à m'adapter à des défis
+											techniques variés, complétant ainsi
+											mon expertise en développement
+											logiciel et web.
+										</div>
+									</div>
+								</div>
+								<div
+									class="hidden bg-white p-4 rounded-lg shadow-lg"
+									id="exp-ilp"
+								>
+									<h2
+										class="text-center text-xl lg:text-3xl font-bold text-violet-800 m-2"
+									>
+										IL Platform
+									</h2>
+									<div class="hidden lg:block">
+										<div class="text-sm mb-2">
+											Depuis septembre 2023, j'enseigne la
+											programmation à de jeunes élèves au
+											sein de IL Platform. J'ai commencé
+											par initier les plus jeunes, âgés de
+											8 à 10 ans, à la programmation avec
+											Scratch Jr., un outil simple et
+											visuel qui leur permet de comprendre
+											les bases du codage de manière
+											ludique.
+										</div>
+										<div class="text-sm mb-2">
+											J'ai ensuite accompagné des élèves
+											plus âgés, de 10 à 12 ans, dans
+											l'exploration de Scratch, où ils ont
+											pu créer des projets interactifs
+											plus complexes. Enfin, j'ai formé
+											des adolescents de 12 à 16 ans aux
+											langages de programmation Python,
+											ainsi qu'aux bases du développement
+											web avec HTML et CSS, leur
+											fournissant des compétences
+											techniques essentielles.
+										</div>
+										<div class="text-sm">
+											Cette expérience d'enseignement chez
+											IL Platform a été extrêmement
+											enrichissante. Elle m'a permis de
+											perfectionner mes compétences
+											pédagogiques, d'affiner ma capacité
+											à vulgariser des concepts techniques
+											complexes, et surtout, de voir
+											l'impact positif que l'apprentissage
+											de la programmation peut avoir sur
+											les jeunes esprits. Mon rôle ici
+											n'est pas seulement de leur
+											enseigner le code, mais aussi de les
+											inspirer à devenir les créateurs de
+											demain dans un monde de plus en plus
+											numérique.
+										</div>
+									</div>
+									<div class="lg:hidden">
+										<div class="text-sm mb-1">
+											Depuis septembre 2023, j'enseigne la
+											programmation à des élèves de tous
+											âges chez IL Platform. J'ai formé
+											les plus jeunes à Scratch Jr., les
+											adolescents à Python et au
+											développement web, leur fournissant
+											des compétences techniques
+											essentielles.
+										</div>
+										<div class="text-sm mb-1">
+											Cette expérience m'a permis de
+											perfectionner mes compétences
+											pédagogiques, d'affiner ma capacité
+											à vulgariser des concepts techniques
+											complexes, et surtout, de voir
+											l'impact positif de l'apprentissage
+											de la programmation sur les jeunes
+											esprits.
+										</div>
+										<div class="text-sm">
+											Mon rôle est de les inspirer à
+											devenir les créateurs de demain dans
+											un monde de plus en plus numérique.
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="grid grid-rows-3 gap-10">
-								<div class="bg-white shadow-lg rounded-lg">
-									<button class="h-full">
+								<div
+									class="bg-white h-20 w-20 shadow-lg rounded-full border-4 border-violet-200 animate-bounce hover:scale-110 transform transition-transform duration-300"
+								>
+									<button
+										class="p-2 h-full"
+										id="btn-freelance"
+									>
 										<img
-											src="https://via.placeholder.com/100"
-											alt=""
+											src="./src/logo/mpIcon.png"
+											alt="Morgan Phemba's logo"
 											class="rounded-lg h-full"
 										/>
 									</button>
 								</div>
-								<div class="bg-white shadow-lg rounded-lg">
-									<button class="h-full">
+								<div
+									class="bg-white h-20 w-20 shadow-lg rounded-full border-4 border-violet-200 hover:scale-110 transform transition-transform duration-300"
+								>
+									<button
+										class="p-4 pt-5 h-full"
+										id="btn-beego"
+									>
 										<img
-											src="https://via.placeholder.com/100"
-											alt=""
+											src="./src/logo/beego_logo.png"
+											alt="Beego's logo"
 											class="rounded-lg h-full"
 										/>
 									</button>
 								</div>
-								<div class="bg-white shadow-lg rounded-lg">
-									<button class="h-full">
+								<div
+									class="bg-white h-20 w-20 shadow-lg rounded-full border-4 border-violet-200 hover:scale-110 transform transition-transform duration-300"
+								>
+									<button class="p-4 h-full" id="btn-ilp">
 										<img
-											src="https://via.placeholder.com/100"
-											alt=""
+											src="./src/logo/ILPLogo.png"
+											alt="ILP's logo"
 											class="rounded-lg h-full"
 										/>
 									</button>
@@ -677,38 +984,81 @@
 									Qui est Morgan ?
 								</h2>
 							</div>
-							<p class="md:hidden mb-3">
-								<span class="text-violet-500">TLDR :</span>
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Quaerat sit recusandae veniam
-								cumque atque perspiciatis voluptate cum! Porro,
-								cum in. Id aperiam necessitatibus aut modi.
-								<span class="text-violet-500">END TLDR</span>
+							<p class="md:hidden text-sm mb-3" id="tldr">
+								<span class="bg-gray-200 text-violet-500"
+									>TL;DR :</span
+								>
+								<br />
+								Étudiant en informatique à l'<a
+									href="http://www.fsa.uliege.be/cms/c_3112656/fr/fsa"
+									class="text-violet-600 underline hover:no-underline"
+									>Uliège</a
+								>, développeur web freelance, administrateur
+								chez
+								<a
+									href="http://nhitec.com/"
+									class="text-violet-600 underline hover:no-underline"
+									>N-HiTec</a
+								>, formateur en programmation pour
+								<a
+									href="http://www.ilplatform.be/"
+									class="text-violet-600 underline hover:no-underline"
+									>IL Platform</a
+								>
+								et consultant IT pour
+								<a
+									href="https://beego.be/fr/accueil/"
+									class="text-violet-600 underline hover:no-underline"
+									>Beego</a
+								>.
+								<br />
+								<span class="bg-gray-200 text-violet-500"
+									>END TL;DR
+								</span>
 							</p>
 
 							<p class="hidden md:block mb-3 moreText">
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Quaerat sit recusandae veniam
-								cumque atque perspiciatis voluptate cum! Porro,
-								cum in. Id aperiam necessitatibus aut modi.
+								Étudiant en Sciences Informatiques à la
+								<a
+									class="font-medium text-violet-600 underline hover:no-underline"
+									href="https://www.fsa.uliege.be/cms/c_3112656/fr/fsa"
+									>FACSA, Uliège</a
+								>, je me passionne pour le développement
+								logiciel, dans lequel je me spécialise à
+								l'université.
 							</p>
 							<p class="hidden md:block mb-3 moreText">
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Quaerat sit recusandae veniam
-								cumque atque perspiciatis voluptate cum! Porro,
-								cum in. Id aperiam necessitatibus aut modi.
+								Parallèlement à mes études, je me suis formé en
+								autodidacte au développement web et j'ai
+								commencé à travailler en tant que développeur
+								web fullstack en freelance.
 							</p>
 							<p class="hidden md:block mb-3 moreText">
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Quaerat sit recusandae veniam
-								cumque atque perspiciatis voluptate cum! Porro,
-								cum in. Id aperiam necessitatibus aut modi.
+								Au sein de l'université, j'ai également eu
+								l'opportunité de rejoindre la Junior Entreprise
+								<a
+									class="font-medium text-violet-600 underline hover:no-underline"
+									href="https://nhitec.com/"
+									>N-HiTec</a
+								>, dont je suis actuellement administrateur
+								chargé des relations publiques et des
+								événements.
 							</p>
 							<p class="hidden md:block mb-3 moreText">
-								Lorem ipsum dolor, sit amet consectetur
-								adipisicing elit. Quaerat sit recusandae veniam
-								cumque atque perspiciatis voluptate cum! Porro,
-								cum in. Id aperiam necessitatibus aut modi.
+								En complément de mes activités universitaires et
+								de freelance, j'interviens en tant que formateur
+								en programmation pour
+								<a
+									class="font-medium text-violet-600 underline hover:no-underline"
+									href="https://www.ilplatform.be/"
+									>IL Platform</a
+								>. Par ailleurs, j'exerce également en tant que
+								consultant IT pour
+								<a
+									class="font-medium text-violet-600 underline hover:no-underline"
+									href="https://beego.be/fr/accueil/"
+									>Beego</a
+								>
 							</p>
 
 							<!-- Bouton pour afficher/masquer le texte supplémentaire -->
@@ -716,6 +1066,7 @@
 								id="toggleButton"
 								class="md:hidden mt-4 text-violet-500 hover:text-violet-700"
 							>
+								<span id="no-reverse">En savoir plus</span>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="h-6 w-6 mx-auto transform transition-transform duration-300"
@@ -748,26 +1099,20 @@
 									<div
 										class="flex flex-col justify-center items-end"
 									>
-										<h3 class="text-violet-500">Développement Web</h3>
-									</div>
-									<hr class="my-1" />
-									<div>
-										Lorem ipsum dolor sit amet consectetur
-										adipisicing elit. Quo, quasi.
-									</div>
-								</div>
-							</div>
-							<div class="bg-white p-4 rounded-lg shadow-lg">
-								<div class="flex flex-col justify-between">
-									<div
-										class="flex flex-col justify-center items-end"
-									>
-										<h3 class="text-violet-500">Conception Web</h3>
-									</div>
-									<hr class="my-1" />
-									<div>
-										Lorem ipsum dolor sit amet consectetur
-										adipisicing elit. Quo, quasi.
+										<h3 class="text-violet-500">
+											Développement Web
+										</h3>
+										<hr
+											class="my-1 border-t border-gray-200 w-full"
+										/>
+										<p>
+											Création et déploiement de sites web
+											dynamiques, incluant le
+											développement front-end et back-end,
+											avec un focus sur la performance, la
+											sécurité et l'expérience
+											utilisateur.
+										</p>
 									</div>
 								</div>
 							</div>
@@ -776,20 +1121,49 @@
 									<div
 										class="flex flex-col justify-center items-end"
 									>
-										<h3 class="text-violet-500">Maintenance</h3>
-									</div>
-									<hr class="my-1" />
-									<div>
-										Lorem ipsum dolor sit amet consectetur
-										adipisicing elit. Quo, quasi.
+										<h3 class="text-violet-500">
+											Conception Web
+										</h3>
+										<hr
+											class="my-1 border-t border-gray-200 w-full"
+										/>
+										<p>
+											Élaboration de designs web intuitifs
+											et esthétiques, en mettant l'accent
+											sur l'ergonomie, la navigation
+											fluide, et la compatibilité
+											multi-plateforme.
+										</p>
 									</div>
 								</div>
 							</div>
-							<div
-								class="bg-white p-4 pl-6 rounded-lg shadow-lg"
-							>
-								<div class="flex items-center justify-between">
-									<div class="grid grid-cols-3 gap-5">
+							<div class="bg-white p-4 rounded-lg shadow-lg">
+								<div class="flex flex-col justify-between">
+									<div
+										class="flex flex-col justify-center items-end"
+									>
+										<h3 class="text-violet-500">
+											Maintenance
+										</h3>
+									</div>
+									<hr
+										class="my-1 border-t border-gray-200 w-full"
+									/>
+									<p>
+										Gestion continue et amélioration des
+										sites web existants, incluant la
+										correction de bugs, les mises à jour de
+										sécurité, et l'optimisation des
+										performances pour garantir une opération
+										sans interruption.
+									</p>
+								</div>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow-lg">
+								<div class="flex items-center justify-center">
+									<div
+										class="grid grid-cols-3 gap-5 justify-center"
+									>
 										<img
 											src="./src/logo/mongodb.png"
 											alt="Compétences : MongoDB"
@@ -816,7 +1190,7 @@
 											class="w-12"
 										/>
 										<img
-											src="./src/logo//figma.png"
+											src="./src/logo/figma.png"
 											alt="Compétences : Figma"
 											class="w-12"
 										/>
@@ -834,41 +1208,171 @@
 									Expérience
 								</h2>
 							</div>
-							<div class="grid grid-cols-3 gap-5">
-								<div class="bg-white rounded-lg shadow-lg">
-									<button class="h-full">
+							<div class="flex flex-col items-center">
+								<!-- 3 buttons like "Me connaitre" -->
+								<button
+									class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-violet-300 to-violet-300 group-hover:from-violet-300 group-hover:to-violet-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200 w-32 animate-bounce"
+									id="mobile-btn-freelance"
+								>
+									<span
+										class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0 text-center"
+									>
+										Freelance
+									</span>
+								</button>
+								<button
+									class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-violet-300 to-violet-300 group-hover:from-violet-300 group-hover:to-violet-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200 w-32"
+									id="mobile-btn-beego"
+								>
+									<span
+										class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0 text-center"
+									>
+										Beego
+									</span>
+								</button>
+								<button
+									class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-violet-300 to-violet-300 group-hover:from-violet-300 group-hover:to-violet-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200 w-32"
+									id="mobile-btn-ilp"
+								>
+									<span
+										class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0 text-center"
+									>
+										ILP
+									</span>
+								</button>
+							</div>
+							<div class="container" id="mobile-exp">
+								<div id="mobile-exp-none">&nbsp;</div>
+								<div
+									class="hidden bg-white p-4 rounded-lg shadow-lg"
+									id="mobile-exp-freelance"
+								>
+									<div>
 										<img
-											src="https://via.placeholder.com/100"
-											alt=""
-											class="rounded-lg h-full"
+											src="./src/logo/mpIcon.png"
+											alt="Morgan Phemba's logo"
+											class="w-14 mx-auto"
 										/>
-									</button>
+									</div>
+									<hr
+										class="mt-1 mb-2 border-t border-gray-200 w-full"
+									/>
+									<div class="text-sm mb-1">
+										En 2022, j'ai pris l'initiative de me
+										lancer en freelance pour acquérir des
+										expériences pratiques que l'université
+										ne pouvait m'offrir, me formant en
+										autodidacte au développement web
+										fullstack.
+									</div>
+									<div class="text-sm mb-1">
+										Mes premiers clients, principalement
+										issus de mon cercle familial et amical,
+										m'ont permis de consolider mes
+										compétences et de gagner en confiance.
+									</div>
+									<div class="text-sm mb-1">
+										En 2024, fort de cette expérience, j'ai
+										choisi de me perfectionner davantage
+										pour élargir ma clientèle et offrir des
+										services plus complets, avec l'ambition
+										de transformer cette passion en une
+										activité freelance solide et
+										diversifiée.
+									</div>
 								</div>
-								<div class="bg-white rounded-lg shadow-lg">
-									<button class="h-full">
+								<div
+									class="hidden bg-white p-4 rounded-lg shadow-lg"
+									id="mobile-exp-beego"
+								>
+									<div>
 										<img
-											src="https://via.placeholder.com/100"
-											alt=""
-											class="rounded-lg h-full"
+											src="./src/logo/beego_logo.png"
+											alt="Beego's logo"
+											class="w-14 mx-auto"
 										/>
-									</button>
+									</div>
+									<hr
+										class="mt-1 mb-2 border-t border-gray-200 w-full"
+									/>
+									<div class="text-sm mb-1">
+										Depuis octobre 2023, je suis consultant
+										IT chez Beego, où j'offre un support
+										technique et une assistance informatique
+										à une clientèle variée, allant du
+										diagnostic de pannes à l'optimisation
+										des outils informatiques.
+									</div>
+									<div class="text-sm mb-1">
+										Au-delà des aspects techniques, j'assure
+										un rôle de conseiller pour aider les
+										clients à exploiter pleinement leurs
+										outils, améliorant ainsi leur
+										productivité et leur efficacité.
+									</div>
+									<div class="text-sm">
+										Cette expérience m'a permis de renforcer
+										ma capacité à résoudre des problèmes, à
+										communiquer avec les clients, et à
+										m'adapter à des défis techniques variés,
+										complétant ainsi mon expertise en
+										développement logiciel et web.
+									</div>
 								</div>
-								<div class="bg-white rounded-lg shadow-lg">
-									<button class="h-full">
+								<div
+									class="hidden bg-white p-4 rounded-lg shadow-lg"
+									id="mobile-exp-ilp"
+								>
+									<div>
 										<img
-											src="https://via.placeholder.com/100"
-											alt=""
-											class="rounded-lg h-full"
+											src="./src/logo/ILPLogo.png"
+											alt="ILP's logo"
+											class="w-14 mx-auto"
 										/>
-									</button>
+									</div>
+									<hr
+										class="mt-1 mb-2 border-t border-gray-200 w-full"
+									/>
+									<div class="text-sm mb-1">
+										Depuis septembre 2023, j'enseigne la
+										programmation à des élèves de tous âges
+										chez IL Platform. J'ai formé les plus
+										jeunes à Scratch Jr., les adolescents à
+										Python et au développement web, leur
+										fournissant des compétences techniques
+										essentielles.
+									</div>
+									<div class="text-sm mb-1">
+										Cette expérience m'a permis de
+										perfectionner mes compétences
+										pédagogiques, d'affiner ma capacité à
+										vulgariser des concepts techniques
+										complexes, et surtout, de voir l'impact
+										positif de l'apprentissage de la
+										programmation sur les jeunes esprits.
+									</div>
+									<div class="text-sm">
+										Mon rôle est de les inspirer à devenir
+										les créateurs de demain dans un monde de
+										plus en plus numérique.
+									</div>
 								</div>
 							</div>
-							<div
-								class="bg-white p-4 rounded-lg shadow-lg"
-							></div>
 						</div>
 					</div>
 				</div>
+			</section>
+
+			<!-- Project Section -->
+			<section id="section-projects" class="container mx-auto p-12">
+				<div class="flex justify-center">
+					<h2
+					class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-800 text-center mb-8"
+				>
+					Projets
+				</h2>
+				</div>
+				
 			</section>
 		</main>
 		<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
