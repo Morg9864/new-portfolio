@@ -32,6 +32,17 @@
 			"image": "./src/img/bankist_all-devices-black.png",
 			"link": "https://bankist-website.morganphemba.be",
 			"github": "https://github.com/utilisateur/bankist"
+		},
+		{
+			"id": 4,
+			"title": "Barber Website",
+			"clientDescription": "Le site du Barbier de Liège vous invite à découvrir un salon spécialisé dans les soins de la barbe et les coupes de cheveux pour hommes. Avec une ambiance authentique et un savoir-faire traditionnel, chaque visite est une expérience unique. Le site est bien structuré, mettant en avant les services disponibles, allant des coupes classiques aux soins de la barbe, le tout à des prix attractifs.",
+			"developerDescription": "Techniquement, le site Barber est conçu pour être à la fois élégant et performant. Il est construit avec HTML, CSS, et JavaScript, garantissant une compatibilité sur tous les appareils, y compris les mobiles. Le site offre une navigation fluide, des temps de chargement rapides, et une interface utilisateur intuitive, assurant une expérience agréable pour les utilisateurs.",
+			"designerDescription": "Le design du site Barber reflète parfaitement l'essence d'un barbier traditionnel. L'utilisation de couleurs sombres et de typographie vintage crée une atmosphère chaleureuse et professionnelle. Les images sont soigneusement choisies pour capturer l'art et la précision des coupes et soins proposés, renforçant ainsi la crédibilité et l'authenticité du salon.",
+			"technologies": ["HTML", "CSS", "JavaScript"],
+			"image": "./src/img/barber_all-devices-black.png",
+			"link": "https://barber.morganphemba.be",
+			"github": "https://github.com/utilisateur/barber"
 		}
 	]
 }
