@@ -29,13 +29,16 @@
 		<link rel="stylesheet" href="./src/css/animation.css" />
 
 		<script src="./src/js/header.js" defer></script>
+		<script src="./src/js/nav.js" defer></script>
 		<script src="./src/js/about.js" defer></script>
+		<script src="./src/js/footer.js" defer></script>
+		<script src="./src/js/cookies.js" defer></script>
 		<script>
 			document.documentElement.classList.add("js");
 		</script>
 	</head>
 
-	<body class="bg-violet-50 text-gray-500 mx-auto w-4/5 h-screen">
+	<body class="bg-violet-50 text-gray-500 h-screen">
 		<!--Responsive Navbar -->
 		<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
 			<div class="container mx-auto px-6 py-3">
@@ -116,7 +119,9 @@
 					class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>A propos</a
 				>
-				<a href="#section-projects" class="block py-2 px-4 text-sm hover:bg-gray-200"
+				<a
+					href="#section-projects"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>Projets</a
 				>
 				<a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200"
@@ -126,7 +131,7 @@
 		</nav>
 		<!--FIN Responsive Navbar -->
 
-		<main>
+		<main class="mx-auto w-4/5 ">
 			<!-- Hero Section -->
 			<section
 				id="section-hero"
@@ -482,6 +487,7 @@
 				</div>
 				<!-- Fin de la grille -->
 			</section>
+			<!-- FIN Hero Section -->
 
 			<!-- About Section -->
 			<section id="section-about" class="container mx-auto p-10">
@@ -619,6 +625,8 @@
 									</p>
 								</div>
 							</div>
+
+							<!-- LANGAGES -->
 							<div
 								class="flex justify-between bg-white p-4 rounded-lg shadow-lg"
 							>
@@ -653,6 +661,7 @@
 									class="md:w-8 lg:w-12"
 								/>
 							</div>
+							<!-- end langages -->
 						</div>
 					</div>
 
@@ -1362,19 +1371,346 @@
 					</div>
 				</div>
 			</section>
+			<!-- FIN About Section -->
 
 			<!-- Project Section -->
 			<section id="section-projects" class="container mx-auto p-12">
 				<div class="flex justify-center">
 					<h2
-					class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-800 text-center mb-8"
-				>
-					Projets
-				</h2>
+						class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-800 text-center mb-8"
+					>
+						Projets
+					</h2>
 				</div>
-				
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+				>
+					<!-- OMNIFOOD -->
+					<div
+						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
+					>
+						<a href="projet.html?id=1">
+							<img
+								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
+								src="./src/img/omnifood_laptop.png"
+								alt=""
+								style="object-position: bottom; width: 100%"
+							/>
+						</a>
+						<div
+							class="p-5 flex-grow flex flex-col justify-between"
+						>
+							<div>
+								<a href="projet.html?id=1">
+									<h5
+										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
+									>
+										Omnifood
+									</h5>
+								</a>
+								<p class="mb-3 font-normal text-gray-700">
+									Omnifood offre un abonnement qui livre
+									quotidiennement des repas sains et
+									personnalisés, adaptés à vos besoins
+									nutritionnels, sans besoin de cuisiner.
+								</p>
+							</div>
+							<a
+								href="projet.html?id=1"
+								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
+							>
+								Read more
+								<svg
+									class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<!-- FIN Omnifood -->
+
+					<!-- NATOURS -->
+					<div
+						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
+					>
+						<a href="projet.html?id=2">
+							<img
+								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
+								src="./src/img/natours_laptop.png"
+								alt=""
+								style="object-position: bottom; width: 100%"
+							/>
+						</a>
+						<div
+							class="p-5 flex-grow flex flex-col justify-between"
+						>
+							<div>
+								<a href="projet.html?id=2">
+									<h5
+										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
+									>
+										Natours
+									</h5>
+								</a>
+								<p class="mb-3 font-normal text-gray-700">
+									Natours propose des aventures immersives
+									dans la nature, adaptées à différents
+									niveaux, allant de la randonnée à
+									l'exploration en montagne et en mer.
+								</p>
+							</div>
+							<a
+								href="projet.html?id=2"
+								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
+							>
+								Read more
+								<svg
+									class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<!-- FIN Natours -->
+
+					<!-- BANKIST WEBSITE -->
+					<div
+						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
+					>
+						<a href="projet.html?id=3">
+							<img
+								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
+								src="./src/img/bankist_laptop.png"
+								alt=""
+								style="object-position: bottom; width: 100%"
+							/>
+						</a>
+						<div
+							class="p-5 flex-grow flex flex-col justify-between"
+						>
+							<div>
+								<a href="projet.html?id=3">
+									<h5
+										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
+									>
+										Bankist Website
+									</h5>
+								</a>
+								<p class="mb-3 font-normal text-gray-700">
+									Bankist est une banque digitale minimaliste,
+									offrant une gestion financière simple avec
+									transferts instantanés, prêts rapides, et
+									carte de débit gratuite sans frais cachés.
+								</p>
+							</div>
+							<a
+								href="projet.html?id=3"
+								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
+							>
+								Read more
+								<svg
+									class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 14 10"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M1 5h12m0 0L9 1m4 4L9 9"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<!-- FIN Bankist Website -->
+				</div>
 			</section>
+			<!-- FIN Project Section -->
+
+			<!-- Contact Section -->
+			<section id="section-contact" class="container mx-auto p-6 lg:p-12">
+				<div class="flex justify-center">
+					<h2
+						class="text-3xl lg:text-4xl xl:text-5xl font-bold text-violet-800 text-center mb-8"
+					>
+						Contact
+					</h2>
+				</div>
+				<div class="mx-4 md:mx-12 lg:mx-24 xl:mx-48">
+					<div class="flex flex-col gap-5">
+						<div>
+							<h3 class="text-2xl font-bold text-violet-800 mb-4">
+								Envoyez-moi un message
+							</h3>
+							<p class="text-gray-700">
+								Vous avez une question, un projet à me proposer
+								ou simplement envie de discuter ? N'hésitez pas
+								à me contacter en remplissant le formulaire
+								ci-dessous.
+							</p>
+						</div>
+						<form
+							action="#"
+							method="POST"
+							class="flex flex-col gap-5"
+						>
+							<div class="flex flex-col md:flex-row md:space-x-4">
+								<div
+									class="flex flex-col gap-2 flex-1 mb-4 md:mb-0"
+								>
+									<label
+										for="firstname"
+										class="text-gray-700 font-medium"
+									>
+										Prénom
+									</label>
+									<input
+										type="text"
+										id="firstname"
+										name="firstname"
+										class="p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-violet-200 focus:outline-none"
+									/>
+								</div>
+								<div class="flex flex-col gap-2 flex-1">
+									<label
+										for="lastname"
+										class="text-gray-700 font-medium"
+									>
+										Nom
+									</label>
+									<input
+										type="text"
+										id="lastname"
+										name="lastname"
+										class="p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-violet-200 focus:outline-none"
+									/>
+								</div>
+							</div>
+							<div class="flex flex-col gap-2">
+								<label
+									for="email"
+									class="text-gray-700 font-medium"
+								>
+									Adresse e-mail
+								</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									class="p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-violet-200 focus:outline-none"
+								/>
+							</div>
+
+							<!-- Droplist pour choisir la raison de la prise de contact -->
+							<div class="flex flex-col gap-2">
+								<label
+									for="reason"
+									class="text-gray-700 font-medium"
+								>
+									Raison de la prise de contact
+								</label>
+								<select
+									id="reason"
+									name="reason"
+									class="bg-white p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-violet-200 focus:outline-none"
+								>
+									<option value="" selected disabled>
+										Selectionnez une raison
+									</option>
+									<option value="question">Question</option>
+									<option value="proposition">
+										Proposition de projet
+									</option>
+									<option value="discussion">
+										Discussion
+									</option>
+								</select>
+							</div>
+
+							<div class="flex flex-col gap-2">
+								<label
+									for="message"
+									class="text-gray-700 font-medium"
+								>
+									Message
+								</label>
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									class="p-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-violet-200 focus:outline-none"
+								></textarea>
+							</div>
+							<button
+								type="submit"
+								class="bg-violet-800 text-white font-medium py-2 rounded-lg hover:bg-violet-900 focus:ring-4 focus:outline-none focus:ring-violet-200"
+							>
+								Envoyer
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- FIN Contact Section -->
 		</main>
+		<!-- Footer -->
+		<footer class="bg-violet-800 text-white text-center py-4">
+			<p>
+				&copy; <span class="year">2024</span> Morgan Phemba. Tous droits
+				réservés.
+			</p>
+		</footer>
+		<!-- Cookie Consent Banner -->
+		<div
+			id="cookie-banner"
+			class="fixed bottom-0 left-0 w-full bg-violet-800 text-white p-4 flex justify-between items-center z-50"
+		>
+			<div class="flex-1 text-sm md:text-base">
+				<p>
+					Ce site utilise des cookies pour améliorer votre expérience
+					utilisateur. En cliquant sur Accepter, vous acceptez mon
+					utilisation des cookies conformément à la
+					<a
+						href="#"
+						class="underline text-violet-300 hover:text-violet-400"
+						>politique de confidentialité</a
+					>.
+				</p>
+			</div>
+			<button
+				id="accept-cookies"
+				class="bg-violet-600 text-white px-4 py-2 rounded-lg hover:bg-violet-700 focus:outline-none ml-4 text-sm md:text-base"
+			>
+				Accepter
+			</button>
+		</div>
+
 		<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 	</body>
 </html>
