@@ -1,0 +1,31 @@
+{
+	"projects": [
+		{
+			"id": 1,
+			"title": "Omnifood",
+			"description": "Omnifood offre un abonnement qui livre quotidiennement des repas sains et personnalisés, adaptés à vos besoins nutritionnels, sans besoin de cuisiner.",
+			"technologies": ["HTML", "CSS", "JavaScript"],
+			"image": "./src/img/omnifood_all-devices-black.png",
+			"link": "https://omnifood.morganphemba.be",
+			"github": "https://github.com/utilisateur/omnifood"
+		},
+		{
+			"id": 2,
+			"title": "Natours",
+			"description": "Natours propose des aventures immersives dans la nature, adaptées à différents niveaux, allant de la randonnée à l'exploration en montagne et en mer.",
+			"technologies": ["HTML", "CSS", "JavaScript"],
+			"image": "./src/img/natours_all-devices-black.png",
+			"link": "https://natours.morganphemba.be",
+			"github": "https://github.com/utilisateur/natours"
+		},
+		{
+			"id": 3,
+			"title": "Bankist Website",
+			"description": "Bankist est une banque digitale minimaliste, offrant une gestion financière simple avec transferts instantanés, prêts rapides, et carte de débit gratuite sans frais cachés.",
+			"technologies": ["HTML", "CSS", "JavaScript"],
+			"image": "./src/img/bankist_all-devices-black.png",
+			"link": "https://bankist-website.morganphemba.be",
+			"github": "https://github.com/utilisateur/bankist"
+		}
+	]
+}
