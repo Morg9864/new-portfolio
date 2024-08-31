@@ -3,7 +3,9 @@
 		{
 			"id": 1,
 			"title": "Omnifood",
-			"description": "Omnifood offre un abonnement qui livre quotidiennement des repas sains et personnalisés, adaptés à vos besoins nutritionnels, sans besoin de cuisiner.",
+			"clientDescription": "En tant que visiteur du site Omnifood, vous êtes accueilli par une solution innovante et pratique pour la gestion de vos repas quotidiens. Le site propose une offre clairement définie et attrayante : des repas sains, personnalisés, et livrés directement à votre domicile. La navigation est fluide, les informations essentielles sont immédiatement accessibles, et les visuels soigneusement sélectionnés suscitent l’envie de souscrire. L’idée de bénéficier d’une alimentation équilibrée sans effort, grâce à une personnalisation poussée, est parfaitement concrétisée.",
+			"developerDescription": "Du point de vue technique, le site Omnifood se distingue par une architecture solide, offrant une interface utilisateur intuitive et réactive. Les pages se chargent rapidement, et le site est optimisé pour une utilisation fluide sur tous types d'appareils, y compris mobiles. Les fonctionnalités dynamiques, telles que la personnalisation des repas et l'intégration des horaires de livraison, sont efficacement mises en œuvre, garantissant une expérience utilisateur fluide. Le code est maintenable et les API utilisées pour gérer les données clients ainsi que les préférences alimentaires sont parfaitement intégrées.",
+			"designerDescription": "Pour un designer, Omnifood est un exemple abouti de minimalisme appliqué au web design. Le site se caractérise par un design épuré, utilisant de manière optimale les espaces blancs et des typographies modernes qui facilitent la lecture. La palette de couleurs, douce et apaisante, renforce l’image de bien-être et de santé, tandis que les images haute résolution des plats captivent instantanément l’attention. Chaque élément visuel est conçu avec soin pour maximiser l’engagement des utilisateurs tout en restant cohérent avec l’identité de la marque.",
 			"technologies": ["HTML", "CSS", "JavaScript"],
 			"image": "./src/img/omnifood_all-devices-black.png",
 			"link": "https://omnifood.morganphemba.be",
@@ -12,7 +14,9 @@
 		{
 			"id": 2,
 			"title": "Natours",
-			"description": "Natours propose des aventures immersives dans la nature, adaptées à différents niveaux, allant de la randonnée à l'exploration en montagne et en mer.",
+			"clientDescription": "Le site Natours vous plonge dans une expérience immersive dédiée aux aventures en plein air. Que vous soyez amateur de randonnée, d'exploration en montagne, ou d'expéditions maritimes, Natours propose une variété d'options pour satisfaire votre soif d'aventure. L'interface est conviviale, et les visuels inspirants vous incitent à explorer davantage et à réserver votre prochaine escapade.",
+			"developerDescription": "Natours est construit sur une base solide de technologies modernes, offrant une interface rapide et responsive. Le site est optimisé pour différents appareils, garantissant une expérience utilisateur fluide, que ce soit sur mobile ou sur desktop. L'intégration de JavaScript améliore les fonctionnalités interactives, tandis que le code propre assure la maintenance facile et les performances optimisées.",
+			"designerDescription": "Le design de Natours est époustouflant, mettant en avant de superbes images de nature qui captivent immédiatement les visiteurs. La palette de couleurs naturelles et la typographie soignée reflètent l'essence des aventures en plein air. L'interface est élégante et fonctionnelle, guidant l'utilisateur à travers le site avec une facilité naturelle, tout en mettant en valeur l'expérience immersive proposée par Natours.",
 			"technologies": ["HTML", "CSS", "JavaScript"],
 			"image": "./src/img/natours_all-devices-black.png",
 			"link": "https://natours.morganphemba.be",
@@ -21,7 +25,9 @@
 		{
 			"id": 3,
 			"title": "Bankist Website",
-			"description": "Bankist est une banque digitale minimaliste, offrant une gestion financière simple avec transferts instantanés, prêts rapides, et carte de débit gratuite sans frais cachés.",
+			"clientDescription": "Bankist Website propose une expérience bancaire simplifiée, moderne et 100% digitale. Dès votre arrivée sur le site, vous êtes accueilli par une interface épurée qui met en avant des services tels que les transferts instantanés, les prêts rapides et une carte de débit gratuite. Tout est conçu pour rendre la gestion financière aussi facile et transparente que possible, vous permettant de vous concentrer sur l'essentiel.",
+			"developerDescription": "Techniquement, le site Bankist est bien optimisé pour offrir une expérience utilisateur fluide et rapide. Construit avec HTML, CSS et JavaScript, il est entièrement responsive, s'adaptant parfaitement à tous les appareils. Les fonctionnalités interactives, telles que les transferts instantanés et la gestion des comptes en ligne, sont bien implémentées, assurant une expérience utilisateur efficace et sans accroc.",
+			"designerDescription": "Le design de Bankist est minimaliste, reflétant l'essence de la banque digitale moderne. Les couleurs sobres, la typographie claire et les images épurées créent une ambiance professionnelle et sereine. L'interface est intuitive, avec une mise en page simple mais élégante qui guide les utilisateurs à travers les différentes fonctionnalités sans les surcharger d'informations.",
 			"technologies": ["HTML", "CSS", "JavaScript"],
 			"image": "./src/img/bankist_all-devices-black.png",
 			"link": "https://bankist-website.morganphemba.be",
