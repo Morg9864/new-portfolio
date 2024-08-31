@@ -13,11 +13,19 @@ fetch("./src/data/projets.json")
 
 		if (projectData) {
 			// Mettre à jour les éléments de la page avec les données du projet
-			document.getElementById("page-title").textContent = `${projectData.title} - Projet`;
+			document.getElementById(
+				"page-title"
+			).textContent = `${projectData.title} - Projet`;
 			document.getElementById("project-title").textContent =
 				projectData.title;
 			document.getElementById("project-description").textContent =
-				projectData.description;
+				projectData.clientDescription;
+			document.getElementById(
+				"project-description-developer"
+			).textContent = projectData.developerDescription;
+			document.getElementById(
+				"project-description-designer"
+			).textContent = projectData.designerDescription;
 			document.getElementById("project-image").src = projectData.image;
 			document.getElementById("project-link").href = projectData.link;
 			document.getElementById("project-github").href = projectData.github;
@@ -30,7 +38,6 @@ fetch("./src/data/projets.json")
 				listItem.textContent = tech;
 				technologiesList.appendChild(listItem);
 			});
-
 		} else {
 			console.error("Projet non trouvé !");
 		}
