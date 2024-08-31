@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title id="page-title">Nom du Projet</title>
+		<link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./src/js/nav.js" defer></script>
+		<script src="./src/js/footer.js" defer></script>
+		<script src="./src/js/project.js" defer></script>
+		<script>
+			document.documentElement.classList.add("js");
+		</script>
+	</head>
+	<body class="bg-violet-50 text-gray-700 mx-auto w-full  h-screen">
+		<!--Responsive Navbar -->
+		<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+			<div class="container mx-auto px-6 py-3">
+				<div class="flex items center justify-between">
+					<div
+						class="hidden w-full text-gray-600 md:flex md:items-center"
+					>
+						<a
+							href="./index.html"
+							class="font-semibold text-xl text-gray-800 md:text-2xl"
+						>
+							Morgan PHEMBA
+						</a>
+						<div
+							class="flex items center justify-between lg:ml-10 xl:ml-80 space-x-16 text-base md:text-base lg:text-xl"
+						>
+							<a
+								href="./index.html#section-hero"
+								class="text-gray-800 hover:text-gray-500"
+								>Accueil</a
+							>
+							<a
+								href="./index.html#section-about"
+								class="text-gray-800 hover:text-gray-500"
+								>A propos</a
+							>
+							<a
+								href="./index.html#section-projects"
+								class="text-gray-800 hover:text-gray-500"
+								>Projets</a
+							>
+							<a
+								href="./index.html#section-contact"
+								class="text-gray-800 hover:text-gray-500"
+								>Contact</a
+							>
+						</div>
+					</div>
+					<div
+						class="md:hidden flex items-center justify-between w-full"
+					>
+						<div class="flex-1"></div>
+						<button class="mobile-menu-button">
+							<svg
+								class="w-6 h-6 text-violet-500 menu-icon"
+								stroke="currentColor"
+								fill="none"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M4 6h16M4 12h16m-7 6h7"></path>
+							</svg>
+							<svg
+								class="w-6 h-6 text-violet-500 x-icon hidden"
+								stroke="currentColor"
+								fill="none"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="hidden mobile-menu text-center">
+				<a
+					href="./index.html#section-hero"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Accueil</a
+				>
+				<a
+					href="./index.html#section-about"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>A propos</a
+				>
+				<a
+					href="./index.html#section-projects"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Projets</a
+				>
+				<a href="./index.html#section-contact" class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Contact</a
+				>
+			</div>
+		</nav>
+		<!--FIN Responsive Navbar -->
+
+		<!-- Main Content -->
+		<main class="container mx-auto px-4 sm:w-4/5 sm:px-6 py-20 mt-12">
+			<div class="bg-white p-4 sm:p-8 rounded-lg shadow-lg">
+				<h1
+					id="project-title"
+					class="text-2xl sm:text-4xl font-bold text-violet-800 mb-4"
+				>
+					Nom du Projet
+				</h1>
+				<img
+					id="project-image"
+					src=""
+					alt="Project Image"
+					class="w-full h-64 sm:h-96 object-contain rounded-lg mb-4"
+				/>
+				<p
+					id="project-description"
+					class="text-base sm:text-lg leading-relaxed mb-4"
+				>
+					Description détaillée du projet.
+				</p>
+				<div class="mb-4">
+					<h3
+						class="text-lg sm:text-xl font-semibold text-violet-700"
+					>
+						Technologies utilisées :
+					</h3>
+					<ul
+						id="project-technologies"
+						class="list-disc list-inside text-gray-700"
+					>
+						<!-- Dynamically generated list items -->
+					</ul>
+				</div>
+				<div
+					class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+				>
+					<a
+						id="project-link"
+						href="#"
+						target="_blank"
+						class="text-center text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 rounded-lg px-4 py-2"
+					>
+						Visiter le site
+					</a>
+					<p
+						id="project-github"
+						class="text-center text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-lg px-4 py-2 cursor-not-allowed opacity-50"
+						style="user-select: none"
+					>
+						Voir sur GitHub
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-violet-800 text-white text-center py-4">
+			<p>
+				&copy; <span class="year">2024</span> Morgan Phemba. Tous droits
+				réservés.
+			</p>
+		</footer>
+
+	</body>
+</html>
