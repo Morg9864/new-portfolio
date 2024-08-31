@@ -9,11 +9,12 @@
 		<script src="./src/js/nav.js" defer></script>
 		<script src="./src/js/footer.js" defer></script>
 		<script src="./src/js/project.js" defer></script>
+		<script src="./src/js/accordion.js" defer></script>
 		<script>
 			document.documentElement.classList.add("js");
 		</script>
 	</head>
-	<body class="bg-violet-50 text-gray-700 mx-auto w-full  h-screen">
+	<body class="bg-violet-50 text-gray-700 mx-auto w-full h-screen">
 		<!--Responsive Navbar -->
 		<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
 			<div class="container mx-auto px-6 py-3">
@@ -99,7 +100,9 @@
 					class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>Projets</a
 				>
-				<a href="./index.html#section-contact" class="block py-2 px-4 text-sm hover:bg-gray-200"
+				<a
+					href="./index.html#section-contact"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
 					>Contact</a
 				>
 			</div>
@@ -121,13 +124,174 @@
 					alt="Project Image"
 					class="w-full h-64 sm:h-96 object-contain rounded-lg mb-4"
 				/>
-				<p
-					id="project-description"
-					class="text-base sm:text-lg leading-relaxed mb-4"
+
+				<!-- Accordion -->
+				<div
+					id="accordion-color"
+					data-accordion="collapse"
+					data-active-classes="bg-violet-100 text-violet-600"
 				>
-					Description détaillée du projet.
-				</p>
-				<div class="mb-4">
+					<h2 id="accordion-color-heading-1">
+						<button
+							type="button"
+							class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-violet-200 hover:bg-violet-100 gap-3"
+							data-accordion-target="#accordion-color-body-1"
+							aria-expanded="true"
+							aria-controls="accordion-color-body-1"
+						>
+						<h3
+						class="text-lg sm:text-xl font-semibold text-violet-700"
+					>
+						Description Visiteur :
+					</h3>
+							<svg
+								data-accordion-icon
+								class="w-3 h-3 rotate-180 shrink-0"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5 5 1 1 5"
+								/>
+							</svg>
+						</button>
+					</h2>
+					<div
+						id="accordion-color-body-1"
+						class="hidden"
+						aria-labelledby="accordion-color-heading-1"
+					>
+						<div
+							class="p-5 border border-b-0 border-gray-200 "
+						>
+						<p
+						id="project-description"
+						class="text-base sm:text-lg leading-relaxed mb-4"
+					>
+						Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Eius voluptatibus adipisci, quasi
+						necessitatibus ipsum, hic saepe placeat vero,
+						similique doloremque enim porro! Dolore quidem
+						officiis animi voluptatum id? Explicabo,
+						consequuntur?
+					</p>
+						</div>
+					</div>
+					<h2 id="accordion-color-heading-2">
+						<button
+							type="button"
+							class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-violet-200 hover:bg-violet-100  gap-3"
+							data-accordion-target="#accordion-color-body-2"
+							aria-expanded="false"
+							aria-controls="accordion-color-body-2"
+						>
+						<h3
+						class="text-lg sm:text-xl font-semibold text-violet-700"
+					>
+						Description Technique :
+					</h3>
+							<svg
+								data-accordion-icon
+								class="w-3 h-3 rotate-180 shrink-0"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5 5 1 1 5"
+								/>
+							</svg>
+						</button>
+					</h2>
+					<div
+						id="accordion-color-body-2"
+						class="hidden"
+						aria-labelledby="accordion-color-heading-2"
+					>
+						<div
+							class="p-5 border border-b-0 border-gray-200"
+						>
+						<p
+							id="project-description-developer"
+							class="text-base sm:text-lg leading-relaxed mb-4"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Voluptate deserunt sed error quasi maxime
+							corporis adipisci impedit saepe, quo reiciendis quia
+							dignissimos modi! Doloribus at, eligendi harum
+							suscipit explicabo quas voluptates nihil ipsa. Alias
+							facere facilis, tempora sit reprehenderit
+							perferendis.
+						</p>
+						</div>
+					</div>
+					<h2 id="accordion-color-heading-3">
+						<button
+							type="button"
+							class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-violet-200 hover:bg-violet-100 gap-3"
+							data-accordion-target="#accordion-color-body-3"
+							aria-expanded="false"
+							aria-controls="accordion-color-body-3"
+						>
+						<h3
+						class="text-lg sm:text-xl font-semibold text-violet-700"
+					>
+						Description Design :
+					</h3>
+							<svg
+								data-accordion-icon
+								class="w-3 h-3 rotate-180 shrink-0"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5 5 1 1 5"
+								/>
+							</svg>
+						</button>
+					</h2>
+					<div
+						id="accordion-color-body-3"
+						class="hidden"
+						aria-labelledby="accordion-color-heading-3"
+					>
+						<div
+							class="p-5 border border-t-0 border-gray-200 "
+						>
+						<p
+						id="project-description-designer"
+						class="text-base sm:text-lg leading-relaxed mb-4"
+					>
+						Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Dolore blanditiis eius et vel unde quae fugit.
+						Unde numquam officiis odit asperiores optio
+						blanditiis, quidem voluptatibus aut tempore
+						dignissimos labore veritatis sequi, tempora a nisi
+						totam itaque hic quasi animi. Facilis.
+					</p>
+						</div>
+					</div>
+				</div>
+				<!-- End Accordion -->
+
+				<div class="my-8">
 					<h3
 						class="text-lg sm:text-xl font-semibold text-violet-700"
 					>
@@ -169,6 +333,5 @@
 				réservés.
 			</p>
 		</footer>
-
 	</body>
 </html>
