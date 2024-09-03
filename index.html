@@ -31,8 +31,21 @@
 		<script src="./src/js/header.js" defer></script>
 		<script src="./src/js/nav.js" defer></script>
 		<script src="./src/js/about.js" defer></script>
+		<script src="./src/js/skill.js" defer></script>
 		<script src="./src/js/footer.js" defer></script>
 		<script src="./src/js/cookies.js" defer></script>
+		<script src="./src/js/sendMail.js" defer></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "dWvPla786c1k05lnS",
+				});
+			})();
+		</script>
 		<script>
 			document.documentElement.classList.add("js");
 		</script>
@@ -131,7 +144,7 @@
 		</nav>
 		<!--FIN Responsive Navbar -->
 
-		<main class="mx-auto w-4/5 ">
+		<main class="mx-auto w-4/5">
 			<!-- Hero Section -->
 			<section
 				id="section-hero"
@@ -292,12 +305,12 @@
 								>
 									<h2>N'hésitez pas à</h2>
 								</div>
-								<button
-									type="button"
+								<a
+									href="#section-contact"
 									class="text-white bg-gradient-to-r from-violet-500 via-violet-600 to-violet-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-violet-300 shadow-lg shadow-violet-500/50 font-medium rounded-lg text-sm px-8 py-4 text-center me-2 mb-2"
 								>
 									Me contacter
-								</button>
+								</a>
 							</div>
 
 							<div
@@ -308,7 +321,8 @@
 								>
 									<h2>Appuyez ici pour</h2>
 								</div>
-								<button
+								<a
+									href="#section-about"
 									class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-violet-300 to-violet-300 group-hover:from-violet-300 group-hover:to-violet-300 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200"
 								>
 									<span
@@ -316,7 +330,7 @@
 									>
 										Me connaitre
 									</span>
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -1103,6 +1117,7 @@
 									Mes compétences
 								</h2>
 							</div>
+							<!-- Développement Web -->
 							<div class="bg-white p-4 rounded-lg shadow-lg">
 								<div class="flex flex-col justify-between">
 									<div
@@ -1114,17 +1129,25 @@
 										<hr
 											class="my-1 border-t border-gray-200 w-full"
 										/>
-										<p>
-											Création et déploiement de sites web
-											dynamiques, incluant le
-											développement front-end et back-end,
-											avec un focus sur la performance, la
-											sécurité et l'expérience
-											utilisateur.
-										</p>
+										<button
+											class="toggle-content text-gray-500 underline hover:no-underline mt-2"
+										>
+											Détails...&darr;
+										</button>
+										<div class="hidden-content hidden">
+											<p>
+												Création et déploiement de sites
+												web dynamiques, incluant le
+												développement front-end et
+												back-end, avec un focus sur la
+												performance, la sécurité et
+												l'expérience utilisateur.
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- Conception Web -->
 							<div class="bg-white p-4 rounded-lg shadow-lg">
 								<div class="flex flex-col justify-between">
 									<div
@@ -1136,16 +1159,26 @@
 										<hr
 											class="my-1 border-t border-gray-200 w-full"
 										/>
-										<p>
-											Élaboration de designs web intuitifs
-											et esthétiques, en mettant l'accent
-											sur l'ergonomie, la navigation
-											fluide, et la compatibilité
-											multi-plateforme.
-										</p>
+										<button
+											class="toggle-content text-gray-500 underline hover:no-underline mt-2"
+										>
+											Détails...&darr;
+										</button>
+										<div class="hidden-content hidden">
+											<p>
+												Élaboration de designs web
+												intuitifs et esthétiques, en
+												mettant l'accent sur
+												l'ergonomie, la navigation
+												fluide, et la compatibilité
+												multi-plateforme.
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- Maintenance -->
 							<div class="bg-white p-4 rounded-lg shadow-lg">
 								<div class="flex flex-col justify-between">
 									<div
@@ -1154,20 +1187,30 @@
 										<h3 class="text-violet-500">
 											Maintenance
 										</h3>
+										<hr
+											class="my-1 border-t border-gray-200 w-full"
+										/>
+										<button
+											class="toggle-content text-gray-500 underline hover:no-underline mt-2"
+										>
+											Détails...&darr;
+										</button>
+										<div class="hidden-content hidden">
+											<p>
+												Gestion continue et amélioration
+												des sites web existants,
+												incluant la correction de bugs,
+												les mises à jour de sécurité, et
+												l'optimisation des performances
+												pour garantir une opération sans
+												interruption.
+											</p>
+										</div>
 									</div>
-									<hr
-										class="my-1 border-t border-gray-200 w-full"
-									/>
-									<p>
-										Gestion continue et amélioration des
-										sites web existants, incluant la
-										correction de bugs, les mises à jour de
-										sécurité, et l'optimisation des
-										performances pour garantir une opération
-										sans interruption.
-									</p>
 								</div>
 							</div>
+
+							<!-- Langages -->
 							<div class="bg-white p-4 rounded-lg shadow-lg">
 								<div class="flex items-center justify-center">
 									<div
@@ -1549,7 +1592,7 @@
 						</div>
 					</div>
 					<!-- FIN Bankist Website -->
-					
+
 					<!-- BARBER -->
 					<div
 						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
@@ -1574,7 +1617,10 @@
 									</h5>
 								</a>
 								<p class="mb-3 font-normal text-gray-700">
-									Barber de Liège propose des coupes de cheveux et des soins de barbe pour hommes, avec un service de qualité centré sur le détail et l'expérience client.
+									Barber de Liège propose des coupes de
+									cheveux et des soins de barbe pour hommes,
+									avec un service de qualité centré sur le
+									détail et l'expérience client.
 								</p>
 							</div>
 							<a
@@ -1627,11 +1673,57 @@
 								ci-dessous.
 							</p>
 						</div>
-						<form
-							action="#"
-							method="POST"
-							class="flex flex-col gap-5"
-						>
+						<form class="flex flex-col gap-5" id="contact-form">
+							<div class="flex flex-col gap-2">
+								<label class="text-gray-700 font-medium">
+									Civilité
+								</label>
+								<div class="flex gap-4">
+									<div class="flex items-center">
+										<input
+											type="radio"
+											id="gender_mr"
+											name="gender"
+											value="Mr"
+											class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-violet-200"
+										/>
+										<label
+											for="gender_mr"
+											class="ml-2 text-gray-700"
+											>Mr</label
+										>
+									</div>
+									<div class="flex items-center">
+										<input
+											type="radio"
+											id="gender_mme"
+											name="gender"
+											value="Mme"
+											class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-violet-200"
+										/>
+										<label
+											for="gender_mme"
+											class="ml-2 text-gray-700"
+											>Mme</label
+										>
+									</div>
+									<div class="flex items-center">
+										<input
+											type="radio"
+											id="gender_mx"
+											name="gender"
+											value="Mx"
+											class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-violet-200"
+										/>
+										<label
+											for="gender_mx"
+											class="ml-2 text-gray-700"
+											>Mx</label
+										>
+									</div>
+								</div>
+							</div>
+
 							<div class="flex flex-col md:flex-row md:space-x-4">
 								<div
 									class="flex flex-col gap-2 flex-1 mb-4 md:mb-0"
@@ -1721,6 +1813,7 @@
 							</div>
 							<button
 								type="submit"
+								onclick="event.preventDefault(); sendMail(); "
 								class="bg-violet-800 text-white font-medium py-2 rounded-lg hover:bg-violet-900 focus:ring-4 focus:outline-none focus:ring-violet-200"
 							>
 								Envoyer
@@ -1738,6 +1831,7 @@
 				réservés.
 			</p>
 		</footer>
+
 		<!-- Cookie Consent Banner -->
 		<div
 			id="cookie-banner"
