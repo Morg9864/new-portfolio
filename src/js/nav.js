@@ -46,6 +46,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		xIcon.classList.add("hidden");
 	}
 });
-
-
-console.log("header.js chargé");

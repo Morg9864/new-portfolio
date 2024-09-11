@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const accordions = document.querySelectorAll('[data-accordion="collapse"]');
 
-	accordions.forEach((accordion) => {
+	accordions.forEach(accordion => {
 		const buttons = accordion.querySelectorAll(
 			"button[data-accordion-target]"
 		);
 
-		buttons.forEach((button) => {
+		buttons.forEach(button => {
 			button.addEventListener("click", function () {
 				const target = document.querySelector(
 					button.getAttribute("data-accordion-target")
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				// Optionally, close other open accordions
 				if (!isExpanded) {
-					buttons.forEach((otherButton) => {
+					buttons.forEach(otherButton => {
 						if (otherButton !== button) {
 							const otherTarget = document.querySelector(
 								otherButton.getAttribute(
