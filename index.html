@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Morgan PHEMBA</title>
-		<script src="https://cdn.tailwindcss.com"></script>
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -24,7 +23,7 @@
 		/>
 		<link rel="manifest" href="./site.webmanifest" />
 
-		<link rel="stylesheet" href="./css/output.css" />
+		<link rel="stylesheet" href="./src/css/output.css" />
 		<link rel="stylesheet" href="./src/css/svg.css" />
 		<link rel="stylesheet" href="./src/css/animation.css" />
 
@@ -1432,7 +1431,7 @@
 					<div
 						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
 					>
-						<a href="projet.html?id=1">
+						<a href="./projet.html?id=1">
 							<img
 								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
 								src="./src/img/omnifood_laptop.png"
@@ -1444,7 +1443,7 @@
 							class="p-5 flex-grow flex flex-col justify-between"
 						>
 							<div>
-								<a href="projet.html?id=1">
+								<a href="./projet.html?id=1">
 									<h5
 										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
 									>
@@ -1459,7 +1458,7 @@
 								</p>
 							</div>
 							<a
-								href="projet.html?id=1"
+								href="./projet.html?id=1"
 								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
 							>
 								Read more
@@ -1487,7 +1486,7 @@
 					<div
 						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
 					>
-						<a href="projet.html?id=2">
+						<a href="./projet.html?id=2">
 							<img
 								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
 								src="./src/img/natours_laptop.png"
@@ -1499,7 +1498,7 @@
 							class="p-5 flex-grow flex flex-col justify-between"
 						>
 							<div>
-								<a href="projet.html?id=2">
+								<a href="./projet.html?id=2">
 									<h5
 										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
 									>
@@ -1514,7 +1513,7 @@
 								</p>
 							</div>
 							<a
-								href="projet.html?id=2"
+								href="./projet.html?id=2"
 								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
 							>
 								Read more
@@ -1542,7 +1541,7 @@
 					<div
 						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
 					>
-						<a href="projet.html?id=3">
+						<a href="./projet.html?id=3">
 							<img
 								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
 								src="./src/img/bankist_laptop.png"
@@ -1554,7 +1553,7 @@
 							class="p-5 flex-grow flex flex-col justify-between"
 						>
 							<div>
-								<a href="projet.html?id=3">
+								<a href="./projet.html?id=3">
 									<h5
 										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
 									>
@@ -1569,7 +1568,7 @@
 								</p>
 							</div>
 							<a
-								href="projet.html?id=3"
+								href="./projet.html?id=3"
 								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
 							>
 								Read more
@@ -1597,7 +1596,7 @@
 					<div
 						class="max-w-sm bg-white border border-gray-200 rounded-lg shadow flex flex-col"
 					>
-						<a href="projet.html?id=4">
+						<a href="./projet.html?id=4">
 							<img
 								class="transform scale-110 md:scale-105 origin-bottom rounded-t-lg"
 								src="./src/img/barber_laptop.png"
@@ -1609,7 +1608,7 @@
 							class="p-5 flex-grow flex flex-col justify-between"
 						>
 							<div>
-								<a href="projet.html?id=4">
+								<a href="./projet.html?id=4">
 									<h5
 										class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
 									>
@@ -1624,7 +1623,7 @@
 								</p>
 							</div>
 							<a
-								href="projet.html?id=4"
+								href="./projet.html?id=4"
 								class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300"
 							>
 								Read more
@@ -1828,12 +1827,56 @@
 
 		<!-- Footer -->
 		<footer class="bg-violet-800 text-white text-center py-4">
-			<p>
-				&copy; <span class="year">2024</span> Morgan Phemba. Tous droits
-				réservés.
-			</p>
+			<div class="flex flex-col justify-center items-center">
+				<p>
+					&copy; <span class="year">2024</span> Morgan Phemba. Tous
+					droits réservés.
+				</p>
+				<div class="flex flex-row gap-2">
+					<!-- Mentions légales -->
+					<a
+						href="./legal.html"
+						class="text-white hover:underline"
+						>Mentions légales</a
+					>
+					<!-- Politique de confidentialité -->
+					<p>|</p>
+					<a
+						href="./privacy.html"
+						class="text-white hover:underline"
+						>Politique de confidentialité</a
+					>
+				</div>
+			</div>
 		</footer>
 		<!-- FIN Footer -->
+
+		<!-- Cookie consent banner -->
+		<div
+			id="cookie-banner"
+			class="fixed bottom-0 inset-x-0 bg-gray-900 text-white p-4 z-[99999] flex flex-col sm:flex-row justify-between items-center"
+		>
+			<div
+				class="container mx-auto flex flex-col sm:flex-row justify-between items-center"
+			>
+				<p class="text-sm text-center sm:text-left">
+					Nous utilisons des cookies pour améliorer votre expérience.
+					En continuant à utiliser ce site, vous acceptez notre
+					<a
+						href="./privacy.html"
+						target="_blank"
+						class="underline"
+						>politique de confidentialité.</a
+					>
+				</p>
+				<button
+					id="accept-cookies"
+					class="mt-4 sm:mt-0 bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded"
+				>
+					J'accepte
+				</button>
+			</div>
+		</div>
 
 		<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 	</body>
