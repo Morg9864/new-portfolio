@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.morganphemba.be/</loc>
+		<priority>1.00</priority>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/projet.html?id=1</loc>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/projet.html?id=2</loc>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/projet.html?id=3</loc>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/projet.html?id=4</loc>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/legal.html</loc>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/privacy.html</loc>
+	</url>
+	<url>
+		<loc>https://www.morganphemba.be/src/docs/CV-Morgan_Phemba.pdf</loc>
+	</url>
+</urlset>
