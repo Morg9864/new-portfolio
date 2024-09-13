@@ -3,14 +3,20 @@ module.exports = {
 	content: {
 		relative: true,
 		transform: content => content.replace(/taos:/g, ""),
-		files: [
-			"./src/**/*.{html,js}", // Tous les fichiers HTML et JS dans le répertoire src
-			"./*.html", // Les fichiers HTML à la racine
-			"./*.js", // Les fichiers JS à la racine, s'il y en a
-		],
+		files: ["./src/**/*.{html,js}", "./*.html", "./*.js"],
 	},
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				spin: "spin 1s linear infinite",
+			},
+			keyframes: {
+				spin: {
+					"0%": { transform: "rotate(0deg)" },
+					"100%": { transform: "rotate(360deg)" },
+				},
+			},
+		},
 	},
 	plugins: [require("taos/plugin")],
 	safelist: [
