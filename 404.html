@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page non trouvée</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/src/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/src/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/src/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<link rel="stylesheet" href="/src/css/output.css" />
+		<script src="/src/js/nav.js" defer></script>
+	</head>
+	<body class="bg-violet-50 text-gray-500 h-screen">
+		<!--Responsive Navbar -->
+		<nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50" id="nav">
+			<div class="container mx-auto px-6 py-3">
+				<div class="flex items center justify-between">
+					<div
+						class="hidden w-full text-gray-600 md:flex md:items-center"
+					>
+						<a
+							href="#"
+							class="font-semibold text-xl text-gray-800 md:text-2xl"
+						>
+							Morgan PHEMBA
+						</a>
+						<div
+							class="flex items center justify-between lg:ml-10 xl:ml-80 space-x-16 text-base md:text-base lg:text-xl"
+						>
+							<a
+								href="#section-hero"
+								class="text-gray-800 hover:text-gray-500"
+								>Accueil</a
+							>
+							<a
+								href="#section-about"
+								class="text-gray-800 hover:text-gray-500"
+								>A propos</a
+							>
+							<a
+								href="#section-projects"
+								class="text-gray-800 hover:text-gray-500"
+								>Projets</a
+							>
+							<a
+								href="#section-contact"
+								class="text-gray-800 hover:text-gray-500"
+								>Contact</a
+							>
+						</div>
+					</div>
+					<div
+						class="md:hidden flex items-center justify-between w-full"
+					>
+						<div class="flex-1"></div>
+						<button class="mobile-menu-button">
+							<svg
+								class="w-6 h-6 text-violet-500 menu-icon"
+								stroke="currentColor"
+								fill="none"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M4 6h16M4 12h16m-7 6h7"></path>
+							</svg>
+							<svg
+								class="w-6 h-6 text-violet-500 x-icon hidden"
+								stroke="currentColor"
+								fill="none"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="hidden mobile-menu text-center">
+				<a
+					href="#section-hero"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Accueil</a
+				>
+				<a
+					href="#section-about"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>A propos</a
+				>
+				<a
+					href="#section-projects"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Projets</a
+				>
+				<a
+					href="#section-contact"
+					class="block py-2 px-4 text-sm hover:bg-gray-200"
+					>Contact</a
+				>
+			</div>
+		</nav>
+		<!-- Responsive Navbar -->
+		<main class="flex flex-col items-center justify-center h-full px-4">
+			<div class="text-center">
+				<h1 class="text-8xl md:text-6xl font-bold text-violet-800 mb-4">
+					404
+				</h1>
+				<p class="text-xl md:text-lg mb-6">
+					Oups ! La page que vous recherchez n'existe pas.
+				</p>
+				<a
+					href="/"
+					class="mt-6 inline-block bg-violet-800 text-white px-6 py-3 rounded-lg hover:bg-violet-900"
+				>
+					Retour à l'accueil
+				</a>
+			</div>
+		</main>
+	</body>
+</html>
