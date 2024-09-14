@@ -1,7 +1,3 @@
-// Récupérer l'ID du projet à partir de l'URL
-const urlParams = new URLSearchParams(window.location.search);
-const projectId = urlParams.get("id");
-
 // Charger les données du projet depuis un fichier JSON
 fetch("./src/data/projets.json")
 	.then((response) => response.json())
@@ -26,10 +22,25 @@ fetch("./src/data/projets.json")
 			document.getElementById(
 				"project-description-designer"
 			).textContent = projectData.designerDescription;
-			document.getElementById("project-image").src = projectData.image;
+			const projectImage = document.getElementById("project-image");
+
+			// Lorsque l'image est chargée, cacher le spinner et afficher l'image
+			projectImage.onload = function () {
+				// Cacher le spinner
+				document.getElementById("image-spinner").classList.add("hidden");
+
+				// Afficher l'image
+				projectImage.classList.remove("hidden");
+			};
+
+			// Définir l'URL de l'image et la charger
+			projectImage.src = projectData.image;
+
+			// Lien du projet et GitHub
 			document.getElementById("project-link").href = projectData.link;
 			document.getElementById("project-github").href = projectData.github;
 
+			// Liste des technologies
 			const technologiesList = document.getElementById(
 				"project-technologies"
 			);
